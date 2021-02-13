@@ -1,0 +1,189 @@
+/*
+ * Globals
+ */
+ @import url("https://use.typekit.net/tbb1ifp.css");
+
+*{
+  --color--light-yellow: #E0E895;
+  --color--dark-green: #699E42;
+  --color--light-green: #95C64F;
+  --color--light-blue: #4C96CC;
+  --color--black: #212228;
+  --color--white: #fff;
+  --footer-size: 700px;
+
+}
+/* colors */
+.color--light-yellow{ color: var(--color--light-yellow) }
+.color--dark-green{ color: var(--color--dark-green) }
+.color--light-green{ color: var(--color--light-green) }
+.color--light-blue{ color: var(--color--light-blue) }
+.color--black{ color: var(--color--black) }
+.color--white{ color: var(--color--white) }
+
+/* borders */
+
+.border--light-yellow{ border-color: var(--color--light-yellow)!important; }
+.border--dark-green{ border-color: var(--color--dark-green) !important;}
+.border--light-green{ border-color: var(--color--light-green) !important;}
+.border--light-blue{ border-color: var(--color--light-blue) !important;}
+.border--black{ border-color: var(--color--black) !important;}
+.border--white{ border-color: var(--color--white) !important;}
+
+/* Background Colors */
+.bg--light-yellow{ background-color: var(--color--light-yellow) }
+.bg--dark-green{ background-color: var(--color--dark-green) }
+.bg--light-green{ background-color: var(--color--light-green) }
+.bg--light-blue{ background-color: var(--color--light-blue) }
+.bg--black{ background-color: var(--color--black) }
+.bg--white{ background-color: var(--color--white) }
+
+.rounded-3{ border-radius: 16px !important;; }
+.rounded-2{ border-radius: 8px !important;; }
+#scroll-animate{ overflow: hidden;}
+
+#scroll-animate-main
+{
+  width: 100%;
+  left: 0;
+  position: fixed;
+}
+
+#heightPage,
+#heightScroll
+{
+  width: 10px;
+  top: 0;
+  position: absolute;
+  z-index: 99;
+}
+
+#heightPage
+{
+  left: 0;
+}
+
+#heightScroll
+{
+  right: 0;
+}
+
+header{
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle, rgba(2,0,36,0.48783263305322133) 33%, rgba(2,0,36,0) 75%),
+  url("../img/wawa.jpg");
+  top: 0px;
+  background-size: cover;
+  position: fixed;
+  z-index: -1;
+}
+.cover-container {
+  max-width: 42em;
+
+}
+body {
+  font-family: "futura-pt", sans-serif;
+  min-height: 100vh;
+  background-color: var(--color--black);
+}
+/* Footer  */
+.footer-card{
+  background-color: var(--color--white);
+  border-radius: 16px;
+}
+.footer-card.footer-copyright{
+  border-radius: 8px;
+  font-weight: 400;
+}
+.footer-card.footer-copyright a{
+  text-decoration: none !important;
+  color: var(--color--light-green);
+  border-bottom: solid 2px var(--color--light-green:);
+}
+.footer-content.big{
+  border: 2px solid #fff;
+  border-radius: 16px;
+
+}
+.footer-content.small{
+  background: var(--color--white);
+  border-radius: 8px;
+}
+.footer--img-wrapper{
+  border: 2px solid blue;
+  border-radius: 8px;
+  flex-basis: 30%;
+  overflow: hidden;
+}
+.footer--img-wrapper img{
+  height: 100%;
+  width: 100%;
+  max-height: 125px;
+  object-fit: contain;
+}
+footer
+{
+  background: radial-gradient(circle, rgba(2,0,36,0.48783263305322133) 33%, rgba(2,0,36,.12) 75%),
+  url("../img/PW_Drought_v01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: var(--footer-size);
+  bottom: calc(var(--footer-size)*-1);
+  position: fixed;
+  z-index: -1;
+}
+
+.content
+{
+  min-height: 200vh;
+  background:var(--color--black);
+  position: relative;
+  z-index: 1;
+}
+
+.wrapper-parallax {
+  margin-top: 100%;
+  margin-bottom: var(--footer-size);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+.display-2{
+  font-family: "futura-pt", sans-serif;
+  font-weight: 600;
+}
+h1{
+  text-transform: uppercase;
+  font-family: "futura-pt", Helvetica, sans-sans-serif;
+  font-size: 3em;
+  font-weight: 800;
+  color: #fff;
+}
+
+.container{
+ height: 600px;
+}
+
+.content h1{
+  color: #999;
+}
+
+
+
+header,
+footer,
+#scroll-animate-main
+{
+  -webkit-transition-property: all;
+     -moz-transition-property: all;
+      transition-property: all;
+
+  -webkit-transition-duration: 0.4s;
+     -moz-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0, 1);
+     -moz-transition-timing-function: cubic-bezier(0, 0, 0, 1);
+      transition-timing-function: cubic-bezier(0, 0, 0, 1);
+}
