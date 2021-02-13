@@ -33,22 +33,8 @@
 
 <footer class="footer">
   <section class="footer-container">
-    <div class="footer-row">
-      <div class="logo"></div>
-    </div>
-    <div class="footer-row center">
-      <div class="items">
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-      </div>
-      <div class="circles">
-        <div class="circle"></div>
-      </div>
-    </div>
-    <div class="footer-row">
-      <div class="foot"></div>
-    </div>
+
+    
   </section>
 </footer>
 <!-- partial -->
