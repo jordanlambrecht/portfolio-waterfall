@@ -7,7 +7,7 @@
           <h1 class="text-uppercase color--white">Don't Let Your Portfolio Dry Up.</h1>
           <div class="footer-card px-5 py-5 my-4 shadow-sm">
             <a href="/"><img class="img-fluid" src="https://portfoliowaterfall.pbds.dev/assets/img/PW_PrimaryLogo_Dark_v01.svg" /></a>
-
+ 
           </div>
           <div class="footer-card footer-copyright text-center px-4 py-3 shadow-sm">
             <p class="fw-light lh-1 my-0">
