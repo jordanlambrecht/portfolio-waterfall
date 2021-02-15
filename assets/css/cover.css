@@ -123,10 +123,10 @@ body {
 }
 
 /* Footer  */
-.footer-container{
+/* .footer-container{
   height: calc(var(--footer-size)*.95);
-}
-.general-card,
+} */
+/* .general-card,
 .footer-card,
 .limits-card,
 .strategy-card{
@@ -162,8 +162,8 @@ body {
   width: 100%;
   max-height: 125px;
   object-fit: contain;
-}
-footer
+} */
+/* footer
 {
   background: radial-gradient(circle, rgba(2,0,36,0.48783263305322133) 33%, rgba(2,0,36,.12) 75%),
   url("../img/PW_Drought_v01.jpg");
@@ -174,8 +174,8 @@ footer
   bottom: calc(var(--footer-size)*-1);
   position: fixed;
   z-index: -1;
-}
-
+} */
+/*
 .content
 {
   min-height: 200vh;
@@ -188,8 +188,8 @@ footer
   margin-top: 100%;
   margin-bottom: var(--footer-size);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-}
-.display-2{
+} */
+/* .display-2{
   font-family: "futura-pt", sans-serif;
   font-weight: 600;
   line-height: 90%;
@@ -208,13 +208,13 @@ h1{
   font-size: 3em;
   font-weight: 800;
   color: #fff;
-}
+} */
 
 
 
 
 
-header,
+/* header,
 footer,
 #scroll-animate-main
 {
@@ -229,7 +229,7 @@ footer,
   -webkit-transition-timing-function: cubic-bezier(0, 0, 0, 1);
      -moz-transition-timing-function: cubic-bezier(0, 0, 0, 1);
       transition-timing-function: cubic-bezier(0, 0, 0, 1);
-}
+} */
 
 /* Arrows */
 .arrow {
