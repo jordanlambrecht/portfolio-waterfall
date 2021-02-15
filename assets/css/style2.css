@@ -221,10 +221,12 @@ section.header-container .scroll-down .arrow {
 
 /* ANIMATED PIE CHART */
 /*  Piegraph styling */
-section.piegraph{
+section.piegraph,
+section.piepipes{
   background-color: var(--color--black);
 }
-.container-piegraph{
+.container-piegraph,
+.container-piepipes{
 	height: 100vh;
 	position: relative;
 	padding-right: 2em;
@@ -253,6 +255,93 @@ svg.piegraph--label {
 }
 
 /* END ANIMATED PIE CHART */
+
+/* PIE PIPES STYLING */
+
+/* Pie Pipes */
+.pie-piece--exploded{
+  width: 100%;
+}
+
+#pie-second,
+#pie-third,
+#pie-fourth,
+#moneydrop-2,
+#moneydrop-3,
+#moneydrop-4{
+  margin-top: -3em;
+}
+#pie-fifth {
+  padding-top: 50px;
+  padding-bottom: 10px;
+  transform-origin: top right ;
+  transform: translateX(-12.5%);
+  width: 150%;
+}
+
+@media (max-width: 575.98px){
+  #pie-second,
+  #pie-third,
+  #pie-fourth{
+  	margin-top: -1em;
+  }
+  #pie-fifth{
+    padding-top: 20px;
+    transform: translateX(14%);
+    width: 105%;
+  }
+}
+@media (max-width: 767.98px){
+  #pie-second,
+  #pie-third,
+  #pie-fourth{
+  	top: -1em;
+  }
+  #pie-fifth{
+    padding-top: 20px;
+    transform: translateX(14%);
+    width: 105%;
+  }
+}
+@media (max-width: 991.98px){
+  #pie-second,
+  #pie-third,
+  #moneydrop,
+  #pie-fourth{
+    margin-top: -2em;
+  }
+  #pie-fifth{
+    padding-top: 20px;
+    transform: translateX(10%);
+    width: 110%;
+  }
+}
+
+.wrapper-moneydrop{
+  position: absolute;
+  right: 0;
+  top: -50px;
+}
+.moneydrop{
+  position: absolute;
+  transform-origin: top center;
+  width: 2.22em;
+  bottom:0;
+  right: 0;
+  transform: translate( .5em, 3.33em);
+}
+.moneydrop#moneydrop-5{
+	right: 2.2em;
+  transform: translate( -2em, 2em);
+}
+@media (max-width: 575.98px){
+	.moneydrop#moneydrop-5{
+		right: 1.66em;
+		transform: translate( -1.33em, 2em);
+	}
+}
+
+/* END PIE PIPES STYLING */
 
 /* FOOTER WAVES */
 

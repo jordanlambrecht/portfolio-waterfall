@@ -1,4 +1,4 @@
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 683.8 180.9" style="enable-background:new 0 0 683.8 180.9;" xml:space="preserve">
+<svg version="1.1" id="pieFirst" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 683.8 180.9" style="enable-background:new 0 0 683.8 180.9;" xml:space="preserve">
 
   <lineargradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="63.3147" y1="128.2118" x2="682.2867" y2="128.2118">
     <stop offset="0" style="stop-color:#A4AC71" />
@@ -17,8 +17,6 @@ c-0.5-0.1-567.7-0.1-567.7-0.1L84.1,101c-5,0-20.8-29.2-20.8-23.2v74.3c0,6,4.1,10.
       <polygon class="c-C1C57F" points="214.3,91.6 213.3,113.4 192.4,113.4 9.4,116.5 5.6,116.8 6.5,96.5 		" />
       <path class="c-E0E895" d="M0.7,71.9c-0.1-19.8,10-48,58.3-71.7l155.3,91.4L6.5,96.5C6.5,96.5,0.8,86.5,0.7,71.9z" />
       <path class="c-ADAD7A" d="M6.5,96.5l-0.8,20.3l-1.6,0c-1-4.5-5.2-24.8-3.4-44.9C0.8,86.5,6.5,96.5,6.5,96.5z" />
-    </g>
-    <g>
     </g>
   </g>
   <g class="title">

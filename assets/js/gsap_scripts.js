@@ -30,7 +30,214 @@ let tl_pieGraph = gsap.timeline({
   }
 });
 
-// START PIEGRAPH TIMELINE
+// END PIE CHART ANIMATION
+// START PIE PIPELINE TIMELINE
+
+let tl_piePipeline = gsap.timeline({
+  scrollTrigger: {
+   trigger: ".container-piepipe",
+    start: "top top",
+		end: "+=3000",
+    scrub: 2,
+		snap: {
+      snapTo: "labels",
+      duration: { min: 1, max: 3 },
+      delay: 0.6,
+      ease: "power3"
+    },
+    pin: true,
+  }
+});
+
+tl_piePipeline
+// first
+	.addLabel("first")
+	.from("#pie-first svg", {
+		duration: 3,
+		x: -700,
+		opacity: 0,
+		scale: 0,
+		ease: "back"
+	}, "-=2")
+	.from("#pie-first svg g.title", {
+		duration: .33,
+		x: -25,
+		opacity: 0,
+		scale: 0,
+		ease: "power1.inOut"
+	})
+  .from("#pie-first svg g.text", {
+		duration: 1,
+    opacity: 0,
+    scale: 0,
+    ease: "power1.inOut"
+  })
+	.from("#moneydrop-1", {
+		duration: 2,
+		opacity: 0,
+		scale: 0,
+		ease: "power1.inOut"
+	},"+=1")
+
+// 	second
+  .addLabel("second")
+	.to({}, {duration: 2})
+
+  .from("#pie-second svg", {
+		duration: 3,
+		x: -700,
+		opacity: 0,
+		scale: 0,
+		ease: "back" })
+  .from("#pie-second svg g.title ",  {
+		duration: .33,
+    x: -25,
+    opacity: 0,
+    scale: 0,
+    ease: "power1.inOut"
+  })
+  .from("#pie-second svg g.text", {
+		duration: .33,
+    opacity: 0,
+    scale: 0,
+    ease: "power1.inOut"
+  })
+  .to("#moneydrop-1", {
+		duration: 1,
+		y: 150,
+		opacity: 0,
+		scale: 0,
+		ease: "power1.inOut"
+	})
+  .from("#moneydrop-2", {
+		duration: 2,
+		opacity: 0,
+		scale: 0,
+		ease: "power1.inOut"
+	})
+
+// 	Third
+  .addLabel("third")
+	.to({}, {duration: 2})
+
+ 	.from("#pie-third svg",  {
+		duration: 3,
+		duration: 3,
+		x: -700,
+		opacity: 0,
+		scale: 0,
+		ease: "back"
+	})
+  .from("#pie-third svg g.title ",  {
+		duration: .33,
+    x: -25,
+    opacity: 0,
+    scale: 0,
+    ease: "power1.inOut"
+  })
+  .from("#pie-third svg g.text",  {
+		duration: .33,
+    opacity: 0,
+    scale: 0,
+    ease: "power1.inOut"
+  })
+  .to("#moneydrop-2",  {
+		duration: 1,
+		y: 150,
+		opacity: 0,
+		scale: 0,
+		ease: "power1.inOut"
+	})
+  .from("#moneydrop-3",  {
+		duration: 2,
+		opacity: 0,
+		scale: 0,
+		ease: "power1.inOut"
+	})
+
+// fourth
+  .addLabel("fourth")
+	.to({}, {duration: 2})
+
+	.from("#pie-fourth svg",  {
+		duration: 3,
+		x: -700,
+		opacity: 0,
+		scale: 0,
+		ease: "back"
+	})
+  .from("#pie-fourth svg g.title ",  {
+		duration: .33,
+    x: -25,
+    opacity: 0,
+    scale: 0,
+    ease: "power1.inOut"
+  })
+  .from("#pie-fourth svg g.text ",  {
+		duration: .33,
+    opacity: 0,
+    scale: 0,
+    ease: "power1.inOut"
+  })
+  .to("#moneydrop-3",  {
+		duration: 1,
+		y: 150,
+		opacity: 0,
+		scale: 0,
+		ease: "power1.inOut"
+	},"+=1")
+  .from("#moneydrop-4",  {
+		duration: 2,
+		opacity: 0,
+		scale: 0,
+		ease: "power1.inOut"
+	})
+
+// fifth
+  .addLabel("fifth")
+	.to({}, {duration: 2})
+
+  .from("#pie-fifth svg",  {
+		duration: 3,
+		y: 50,
+		opacity: 0,
+		ease: "back" })
+  .from("#pie-fifth svg g.title", {
+		duration: .33,
+    x: -25,
+    opacity: 0,
+    scale: 0,
+    ease: "ease"
+  },"+=2")
+  .to("#moneydrop-4", {
+		duration: 2,
+		y: 150,
+		opacity: 0,
+		scale: 0,
+		ease: "power1.inOut"
+	},"+=3")
+
+// final
+  .addLabel("final")
+	.from("#moneydrop-5",  {
+		duration: 1,
+		opacity: 0,
+		scale: 0,
+		ease: "power1.inOut"
+	}, "+=1")
+	.to({}, {duration: 2})
+	.to("#moneydrop-5",  {
+		duration: 2,
+		y: 150,
+		opacity: 0,
+		scale: 0,
+		ease: "power1.inOut"
+	}, "+=3")
+  .addLabel("endofstory")
+	.to({}, {duration: 2});
+// END PIE PIPELINE TIMELINE
+
+
 tl_pieGraph.addLabel("piegraph--begin")
 	.from("svg#piegraph g", {
 		duration: 1.66,
