@@ -50,6 +50,70 @@ let tl_pieGraph = gsap.timeline({
 
 // END PIE CHART ANIMATION
 // START PIE PIPELINE TIMELINE
+let tl_interestRates = gsap.timeline();
+tl_interestRates.from(".timeline-block .marker",{
+  duration: 1
+})
+tl_interestRates.from(".timeline-block .marker", {
+  duration:1,
+  scale:0,
+  opacity: 0,
+  stagger:0.15,
+  ease:"back"
+})
+tl_interestRates.from(".timeline-block .timeline-content", {
+  duration: 1,
+  x:-50,
+  opacity: 0,
+  stagger:0.15,
+  ease:"back"
+}, "-=.5");
+
+let tl_stockMarket = gsap.timeline();
+tl_stockMarket.from(".stock-card--inner .display-3",{
+  duration: 1.333
+})
+tl_stockMarket.from(".stock-card--inner .display-3", {
+  duration:1,
+  scale:0,
+  opacity: 0,
+  stagger:0.15,
+  ease:"back"
+})
+tl_stockMarket.from(".stock-card--inner .arrow", {
+  duration: 1,
+  x:-50,
+  opacity: 0,
+  stagger:0.15,
+  ease:"back"
+}, "-=1"),
+tl_stockMarket.from(".stock-card--inner .display-2", {
+  duration: 1,
+  x:-50,
+  opacity: 0,
+  stagger:0.15,
+  ease:"back"
+}, "-=1");
+
+// govt Spending
+let tl_govtSpending = gsap.timeline();
+tl_govtSpending.from(".govt-card--inner h4",{
+  duration: 1.333
+})
+tl_govtSpending.from(".govt-card--inner h4", {
+  duration:1,
+  scale:0,
+  opacity: 0,
+  stagger:0.15,
+  ease:"back"
+})
+tl_govtSpending.from(".govt-card .govt-arrow", {
+  duration:0.5,
+  scale:0,
+  opacity: 0,
+  stagger:0.15,
+  ease:"back"
+},"-=0.55");
 
 let tl_piePipeline = gsap.timeline({
   scrollTrigger: {

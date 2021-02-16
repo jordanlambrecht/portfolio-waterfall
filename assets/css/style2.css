@@ -146,6 +146,36 @@ section.header-container .scroll-down .arrow {
   width: 100vw;
 
 }
+/* Arrows */
+.arrow {
+  width: 120px;
+}
+
+.line {
+  margin-top: 6px;
+  width: 90px;
+  background: var(--color--white);
+  height: 4px;
+  float: left;
+}
+
+.point {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 30px solid var(--color--white);
+  float: right;
+}
+img.govt-arrow{
+  position: absolute;
+  bottom: -40px;
+  right: 50%;
+  transform: translate(50%, 0);
+  width: 55px;
+  z-index:3;
+}
+/* End Arrows */
 
 /* NOTE: ANIMATED PIE CHART */
 /*  Piegraph styling */

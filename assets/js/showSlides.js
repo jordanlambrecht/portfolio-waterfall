@@ -9,10 +9,6 @@ const technology        = document.getElementById( "technology" ),
 
 $(document).ready(function(){
   turnOff(technology);
-  // $(technology).addClass("selected");
-  // $(technologyBox).addClass("showBox");
-      // var color = $( technology ).css( "color" );
-      // changeBgColor(color);
 });
 
 $(technology).click(function() {
@@ -32,6 +28,7 @@ $(govtSpending).click(function() {
     $(govtSpendingBox).addClass("showBox");
     // $(govtSpendingBox).show();
     turnOff(govtSpending);
+    tl_govtSpending.play();
   }
 });
 $(interestRates).click(function() {
@@ -41,6 +38,7 @@ $(interestRates).click(function() {
       changeBgColor(color);
     $(interestRatesBox).addClass("showBox");
     turnOff(interestRates);
+    tl_interestRates.play();
   }
 });
 $(stockMarket).click(function() {
@@ -50,6 +48,7 @@ $(stockMarket).click(function() {
       changeBgColor(color);
     $(stockMarketBox).addClass("showBox");
     turnOff(stockMarket);
+    tl_stockMarket.play();
   }
 });
 function changeBgColor(color){
@@ -82,6 +81,7 @@ function turnOff(navItem){
   if(navItem != interestRates){
     $(interestRates).removeClass("selected");
     $(interestRatesBox).removeClass("showBox");
+    tl_interestRates.reverse();
     slideAway(interestRatesBox);
 
   }
@@ -89,12 +89,14 @@ function turnOff(navItem){
     $(stockMarket).removeClass("selected");
     $(stockMarketBox).removeClass("showBox");
     slideAway(stockMarketBox);
+    tl_stockMarket.reverse();
     // $(stockMarketBox).hide();
   }
   if(navItem != govtSpending){
     $(govtSpending).removeClass("selected");
     $(govtSpendingBox).removeClass("showBox");
     slideAway(govtSpendingBox);
+    tl_govtSpending.reverse();
   }
 
 }
