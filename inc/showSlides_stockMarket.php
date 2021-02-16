@@ -12,28 +12,28 @@
           <h4 class="display-2">360</h4>
         </div>
         <div class="stock-card--inner d-flex justify-content-between px-4 py-3 align-items-center">
-          <h4 class="display-3">1990</h4>
+          <h4 class="display-3">2000</h4>
           <div class="arrow">
             <div class="line"></div>
             <div class="point"></div>
           </div>
-          <h4 class="display-2">360</h4>
+          <h4 class="display-2">1478</h4>
         </div>
         <div class="stock-card--inner d-flex justify-content-between px-4 py-3 align-items-center">
-          <h4 class="display-3">1990</h4>
+          <h4 class="display-3">2010</h4>
           <div class="arrow">
             <div class="line"></div>
             <div class="point"></div>
           </div>
-          <h4 class="display-2">360</h4>
+          <h4 class="display-2">1150</h4>
         </div>
         <div class="stock-card--inner d-flex justify-content-between px-4 py-3 align-items-center">
-          <h4 class="display-3">1990</h4>
+          <h4 class="display-3">2020</h4>
           <div class="arrow">
             <div class="line"></div>
             <div class="point"></div>
           </div>
-          <h4 class="display-2">360</h4>
+          <h4 class="display-2">3337</h4>
         </div>
       </div>
       <p class="govt-footer">  *finance.yahoo.com</p>
