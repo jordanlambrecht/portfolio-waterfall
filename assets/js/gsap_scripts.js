@@ -12,6 +12,24 @@ window.onload = reportWindowSize;
 gsap.registerPlugin(ScrollTrigger);
 // END INITIALIZATION //
 
+let tl_sectionOne = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#thingsChange",
+    start: "top center",
+    end: "+=45%",
+    scrub: true,
+    toggleActions: "play pause reverse restart",
+  }
+});
+tl_sectionOne
+.from('#thingsChangeHeader', {
+  opacity: 0
+})
+.from('ul.showslides li', {
+  opacity:0,
+  y: -30,
+  stagger: 0.2
+});
 // ANIMATE SECTION 04 - PIE CHART //
 
 let tl_pieGraph = gsap.timeline({

@@ -1,10 +1,10 @@
 
-<section class="container-fluid d-flex flex-row vh-100 px-0">
+<section class="container-fluid d-flex flex-row vh-100 px-0" id="thingsChange">
   <div class="showslides--left w-50 h-100 p-2 py-md-5 px-md-4">
     <div class="container h-100 d-flex flex-column justify-content-between">
       <div class="row">
         <div class="col-12">
-          <h1 class="display-2">Things Change Over Time.</h1>
+          <h1 class="display-2" id="thingsChangeHeader">Things Change Over Time.</h1>
         </div>
       </div>
       <div class="row ">
