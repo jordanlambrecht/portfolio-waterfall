@@ -3,10 +3,10 @@
     <div class="col-12">
       <div class="position-relative h-100 w-100">
         <div class="phone-top float negoffset">
-          <?php echo file_get_contents("././assets/img/PF_Phone02_v01.svg"); ?>
+        <img src="././assets/img/PF_Phone02_v01.svg">
         </div>
         <div class="phone-bottom float offset">
-          <?php echo file_get_contents("././assets/img/PF_Phone01_v01.svg"); ?>
+          <img src="././assets/img/PF_Phone01_v01.svg">
         </div>
       </div>
 

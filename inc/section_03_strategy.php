@@ -1,7 +1,7 @@
 <section class="container-fluid vh-100 py-0 my-0 px-0  position-relative "  id="strategy">
 
   <div class="govt-card bg--white position-absolute top-0 start-50  translate-middle-x w-50 px-4 py-3 shadow">
-    <h1 class="display-2 color--dark-blue text-center">What Limits Withdrawal Rates?</h1>
+    <h2 class="display-2 color--dark-blue text-center">What Limits Withdrawal Rates?</h2>
   </div>
   <div class="row h-100 ">
 
