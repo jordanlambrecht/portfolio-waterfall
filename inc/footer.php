@@ -92,22 +92,12 @@
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js'></script>
-<script  src="../assets/js/gsap_scripts.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
 
 <script src="./assets/js/showSlides.js"></script>
-<script src="././assets/js/animeJS.js"></script>
+<script  src="./assets/js/gsap_scripts.js"></script>
+<script src="./assets/js/general_scripts.js"></script>
 
 </body>
 </html>
-<!--
-
-
-
-
-<script src="././assets/js/timeline.js"></script>
-
-</body>
-</html>
-
-</body>
-</html> -->

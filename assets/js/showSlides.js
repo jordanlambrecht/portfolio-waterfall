@@ -1,4 +1,4 @@
-const technology        = document.getElementById( "technology" ),
+var technology          = document.getElementById( "technology" ),
       technologyBox     = document.getElementById( "technology-box" ),
       interestRates     = document.getElementById( "interestrates" ),
       interestRatesBox  = document.getElementById( "interestrates-box" ),
@@ -17,6 +17,7 @@ $(technology).click(function() {
     var color = $( this ).css( "color" );
     changeBgColor(color);
     $(technologyBox).addClass("showBox");
+    tl_technology_mobile.play();
     turnOff(technology);
   }
 });
@@ -101,7 +102,7 @@ function turnOff(navItem){
 
 }
 function slideAway(hideaway){
-  let getOutaHere = document.querySelectorAll('.box:not(.showBox)');
+  var getOutaHere = document.querySelectorAll('.box:not(.showBox)');
 
   var hide = anime({
       targets: document.querySelectorAll('.box:not(.showBox)'),

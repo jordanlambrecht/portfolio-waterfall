@@ -73,6 +73,12 @@ h1.display-2{
   h1.display-2{
     font-size: 4em;
   }
+  h4.display-3{
+    font-size: 2em;
+  }
+  h4.display-2{
+    font-size: 2.22em;
+  }
 }
 .display-3.display-slideShow{
   font-size: 2.66em;
@@ -148,12 +154,14 @@ section.header-container .scroll-down .arrow {
 }
 /* Arrows */
 .arrow {
-  width: 120px;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
 }
 
 .line {
   margin-top: 6px;
-  width: 90px;
+  width:100%;
   background: var(--color--white);
   height: 4px;
   float: left;
@@ -443,9 +451,20 @@ section.footer-container {
 .stock-card .stock-card--inner:nth-child(odd){
   background-color: var(--color--dark-green);
 }
+@media screen and (max-width: 768px){
+  .stock-card--inner h4.display-3{
+
+  }
+  .stock-card--inner h4.display-2{
+    font-size:
+  }
+}
 /* Show Slides */
 .showslides--left {
     background-color: var(--color--black);
+  height: 100vh;
+}
+.showslides--mobile {
   height: 100vh;
 }
 .showslides--right {
@@ -456,7 +475,8 @@ ul.showslides li {
 
 }
 ul.whatlimits-middle li svg,
-ul.showslides li svg{
+ul.showslides li svg,
+ul.showslides-mobile li svg{
   max-height: 75px;
   width: 20%;
 
@@ -469,7 +489,8 @@ ul.whatlimits-middle li svg > *{
   fill: var(--color--white);
   transition: all 0.6s ease;
 }
-ul.showslides li h3{
+ul.showslides li h3,
+ul.showslides-mobile li h3{
   width: 80%;
   list-style: none;
   font-size: 2.22em;
@@ -514,6 +535,45 @@ flex: 0 1 auto;
 .phone-bottom svg{
   object-fit: cover;
 }
+
+@media screen and (max-width : 768px){
+  .phone-top{
+    left: 20px;
+    top: 20px;
+    width: 50vw;
+  }
+  .phone-bottom{
+      right: 20px;
+      bottom: 15%;
+    width: 25vw;
+  }
+}
+@media screen and (max-width : 576px){
+  .phone-top{
+    left: 10%;
+    top: 5%;
+    height: 66vh;
+  }
+  .phone-bottom{
+      right: 15%;
+      bottom: 33%;
+      height: 45vh;
+  }
+}
+.phone{
+  animation: hoverbob 5s ease-in-out 0s alternate infinite;
+}
+.phone:not(:first-child){
+  animation: hoverbob 5s ease-in-out -2s alternate infinite;
+}
+@keyframes hoverbob{
+  from {
+    transform: translateY(0) rotate(0deg);
+  }
+  to {
+    transform: translateY(10%) rotate(3deg);
+  }
+}
 .img-wrapper.showslides {
   display: block;
   height: 350px;
@@ -526,35 +586,49 @@ flex: 0 1 auto;
   height: 100%;
   object-fit: cover;
 }
-
+#technology-box:not(.showBox),
+#interestrates-box:not(.showBox),
+#stockmarket-box:not(.showBox),
+#govtspending-box:not(.showBox){
+  display: none;
+}
 
 ul.showslides li#technology.selected,
+ul.showslides-mobile li#technology,
 ul.showslides li#technology:hover,
 ul.showslides li#technology.selected h3,
 ul.showslides li#technology:hover h3,
+ul.showslides-mobile li#technology h3,
 ul.showslides li#technology.selected svg > *,
-ul.showslides li#technology:hover svg > *{
+ul.showslides li#technology:hover svg > *,
+ul.showslides-mobile li#technology svg > *{
   color: var(--color--light-yellow);
   fill: var(--color--light-yellow);
 
 }
 ul.showslides li#interestrates.selected,
+ul.showslides-mobile li#interestrates,
 ul.showslides li#interestrates:hover,
 ul.showslides li#interestrates.selected h3,
 ul.showslides li#interestrates:hover h3,
+ul.showslides-mobile li#interestrates h3,
 ul.showslides li#interestrates.selected svg > *,
-ul.showslides li#interestrates:hover svg > *{
+ul.showslides li#interestrates:hover svg > *,
+ul.showslides-mobile li#interestrates svg > *{
   color: var(--color--dark-green);
   fill: var(--color--dark-green);
 }
 
 
 ul.showslides li#stockmarket.selected,
+ul.showslides-mobile li#stockmarket,
 ul.showslides li#stockmarket:hover,
+ul.showslides-mobile li#stockmarket h3,
 ul.showslides li#stockmarket.selected h3,
 ul.showslides li#stockmarket:hover h3,
 ul.showslides li#stockmarket.selected svg > *,
-ul.showslides li#stockmarket:hover svg > *{
+ul.showslides li#stockmarket:hover svg > *,
+ul.showslides-mobile li#stockmarket svg > *{
   color: var(--color--light-green);
   fill: var(--color--light-green);
 
@@ -562,10 +636,13 @@ ul.showslides li#stockmarket:hover svg > *{
 
 
 ul.showslides li#govtspending.selected,
+ul.showslides-mobile li#govtspending,
 ul.showslides li#govtspending.selected h3,
 ul.showslides li#govtspending:hover h3,
+ul.showslides-mobile li#govtspending h3,
 ul.showslides li#govtspending.selected svg > *,
-ul.showslides li#govtspending:hover svg > * {
+ul.showslides li#govtspending:hover svg > *,
+ul.showslides-mobile li#govtspending svg > * {
   color: var(--color--light-blue);
   fill: var(--color--light-blue);
 }
@@ -652,24 +729,7 @@ ul.showslides li#govtspending:hover svg > * {
    color: var(--color--white);
 }
 
-@media screen and (max-width: 768px) {
-   .timeline-container:before {
-      left: 8px;
-      width: 2px;
-   }
-   .timeline-block {
-      width: 100%;
-      margin-bottom: 30px;
-   }
-   .timeline-block-right {
-      float: none;
-   }
 
-   .timeline-block-left {
-      float: none;
-      direction: ltr;
-   }
-}
 
 .govt-card--inner h4.display-5{
   font-size: 1.5em;
@@ -731,4 +791,27 @@ ul.showslides li#govtspending:hover svg > * {
 }
 .pt-33{
   padding-top: 250px;
+}
+
+
+/* flickity */
+.thingsChange-mobile:after {
+  content: 'flickity';
+  display: none; /* hide :after */
+}
+
+@media screen and ( min-width: 768px ) {
+  .thingsChange-mobile{
+    display: none;
+  }
+  /* disable Flickity for large devices */
+  .thingsChange-mobile:after {
+    content: '';
+  }
+}
+ol.flickity-page-dots{
+  bottom: 25px;
+}
+.flickity-page-dots .dot {
+   background: #fff;
 }

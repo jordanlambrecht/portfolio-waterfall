@@ -1,5 +1,5 @@
 <?php // TODO: mobile responsiveness ?>
-<section class="container-fluid d-flex flex-row vh-100 px-0" id="thingsChange">
+<section class="container-fluid d-none d-md-flex flex-row vh-100 px-0" id="thingsChange">
   <div class="showslides--left w-50 h-100 p-2 py-md-5 px-md-4">
     <div class="container h-100 d-flex flex-column justify-content-between">
       <div class="row">
@@ -38,21 +38,21 @@
 
   <div class="showslides--right d-flex w-50">
     <article id="technology-box" class="h-100 box showBox">
-      <?php include_once('./inc/showSlides_technology.php');  ?>
+      <?php include('./inc/showSlides_technology.php');  ?>
     </article>
 <!--    Interest Rates  -->
     <article id="interestrates-box" class="h-100 box">
-      <?php include_once("./inc/showSlides_interestRates.php"); ?>
+      <?php include("./inc/showSlides_interestRates.php"); ?>
     </article>
 <!--   stock market   -->
     <article id="stockmarket-box" class="h-100 box">
       <div class="container">
-        <?php include_once("./inc/showSlides_stockMarket.php"); ?>
+        <?php include("./inc/showSlides_stockMarket.php"); ?>
       </div>
     </article>
     <article id="govtspending-box" class="h-100 box">
 
-        <?php include_once("./inc/showSlides_govtSpending.php"); ?>
+        <?php include("./inc/showSlides_govtSpending.php"); ?>
 
     </article>
   </div>

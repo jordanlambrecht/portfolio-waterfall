@@ -1,22 +1,15 @@
 <div class="container p-3 h-100">
   <div class="row h-100">
     <div class="col-12">
-      <div class="position-relative h-100 w-100">
-        <div class="phone-top float negoffset">
+        <h3 class="display-3 display-slideShow mb-2 pb-2 text-center text-sm-left d-block d-sm-none">TECHNOLOGY </br>ADVANCES</h3>
+      <div class="phone-wrapper position-relative h-100 w-100">
+        <div class="phone phone-top float negoffset">
         <img src="././assets/img/PF_Phone02_v01.svg">
         </div>
-        <div class="phone-bottom float offset">
+        <div class="phone phone-bottom float offset">
           <img src="././assets/img/PF_Phone01_v01.svg">
         </div>
       </div>
-
-
     </div>
-
   </div>
 </div>
-
-<!-- <div class="img-wrapper showslides">
-  <h2>Technology B Chjangin</h2>
-  <img class="img-fluid showslides-object-fit" src="https://media.pixelbakery.com/images/test1.png" />
-  </div> -->
