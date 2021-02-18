@@ -9,12 +9,9 @@
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5 offset-lg-2 mb-2 mt-0 pt-1 d-flex flex-column">
           <div class="row d-flex justify-content-center">
-
-
             <div class="col-12">
               <div class="footer-card px-5 py-5 my-4 shadow-sm">
                 <a href="/"><img class="img-fluid" src="https://portfoliowaterfall.pbds.dev/assets/img/PW_PrimaryLogo_Dark_v01.svg" /></a>
-
               </div>
             </div>
           </div>
@@ -74,10 +71,10 @@
 
 <!-- partial -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-
+<script src="https://bundle.run/css-scroll-snap-polyfill@0.1.2"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js'></script>
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="./assets/js/flickity.pkgd.min.js"></script>
 
 
 <script src="./assets/js/showSlides.js"></script>
