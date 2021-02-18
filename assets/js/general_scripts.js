@@ -1,3 +1,5 @@
+console.log("Website developed with love by Pixel Bakery Design Studio in Lincoln, NE. https://pixelbakery.com");
+
 // individual slide animations
 var slides = function slides(i) {
   switch(i) {

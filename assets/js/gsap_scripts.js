@@ -371,7 +371,6 @@ tl_piePipeline
       trigger: ".container-piepipe",
       start: "bottom center",
       end: "+=10%",
-      markers: true,
       scrub: true,
       toggleActions: "play pause reverse resume",
     },
@@ -474,8 +473,6 @@ gsap.timeline({
       trigger: '.section.header-container',
       start: 'top center',
       end: '+=66%',
-      markers: true,
-
     }
   })
   .set('#landing-logo', {

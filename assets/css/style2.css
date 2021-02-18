@@ -417,7 +417,11 @@ section.footer-container {
 }
 
 .content  {
+
   position: relative;
+}
+.content section.snap{
+  scroll-snap-align: start;
 
 }
 
