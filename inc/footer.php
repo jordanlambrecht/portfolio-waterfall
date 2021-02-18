@@ -3,11 +3,11 @@
   <section class="footer-container pt-1 d-flex justify-content-start">
     <div class="container d-flex  mb-2 mt-0 pt-1 flex-column ">
       <div class="row pb-1 ">
-        <div class="col-4 footer-content text-left h-100 py-5">
-          <h1 class="text-uppercase color--white display-2 fw-b">Don't Let Your Portfolio Dry Up.</h1>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 footer-content py-2  pt-sm-3 py-md-5">
+          <h1 class="text-uppercase color--white display-2 fw-b text-center text-md-start">Don't Let Your Portfolio Dry Up.</h1>
 
         </div>
-        <div class="col-5 offset-2 mb-2 mt-0 pt-1 d-flex flex-column">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5 offset-lg-2 mb-2 mt-0 pt-1 d-flex flex-column">
           <div class="row d-flex justify-content-center">
 
 
@@ -40,21 +40,6 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="col-4 mb-2 h-100">
-              <div class=" p-3 bg--white rounded-3 h-100">
-                <div class="footer-icons-inner d-flex align-items-center  border--light-green py-2 px-2 ">
-                  <img  alt="stock market down" src="https://portfoliowaterfall.pbds.dev/assets/img/PW_Down.png" class="img-fluid p-2" />
-                </div>
-              </div>
-            </div> -->
-            <!-- <div class="col-4 mb-2 h-100">
-              <div class=" p-3 bg--white rounded-3 h-100">
-                <div class="footer-icons-inner d-flex align-items-center  border--light-green py-2 px-2 ">
-                  <img alt="stocks" src="https://portfoliowaterfall.pbds.dev/assets/img/PW_Stocks.png" class="img-fluid p-2" />
-                </div>
-              </div>
-            </div> -->
-
           </div>
         </div>
 
@@ -84,8 +69,8 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script>
+<!--
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script> -->
 
 <!-- partial -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>

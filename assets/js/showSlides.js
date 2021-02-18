@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 var technology          = document.getElementById( "technology" ),
       technologyBox     = document.getElementById( "technology-box" ),
       interestRates     = document.getElementById( "interestrates" ),
@@ -54,12 +55,17 @@ $(stockMarket).click(function() {
 });
 function changeBgColor(color){
   // console.log(color);
-  var animateBackground = anime({
-    targets: '.showslides--right',
+  gsap.to('.showslides--right', {
     backgroundColor: color,
-    duration: 4000,
-    autoplay: true
-});
+    duration: 0.66,
+    ease: "none"
+  });
+//   var animateBackground = anime({
+//     targets: '.showslides--right',
+//     backgroundColor: color,
+//     duration: 4000,
+//     autoplay: true
+// });
 }
 // TO-DO:
 // function animateIn(navItem){
@@ -89,46 +95,67 @@ function turnOff(navItem){
   if(navItem != stockMarket){
     $(stockMarket).removeClass("selected");
     $(stockMarketBox).removeClass("showBox");
-    slideAway(stockMarketBox);
     tl_stockMarket.reverse();
-    // $(stockMarketBox).hide();
+    slideAway(stockMarketBox);
+     $(stockMarketBox).hide();
   }
   if(navItem != govtSpending){
     $(govtSpending).removeClass("selected");
     $(govtSpendingBox).removeClass("showBox");
-    slideAway(govtSpendingBox);
     tl_govtSpending.reverse();
+    slideAway(govtSpendingBox);
   }
-
 }
 function slideAway(hideaway){
-  var getOutaHere = document.querySelectorAll('.box:not(.showBox)');
+  // var getOutaHere = document.querySelectorAll('.box:not(.showBox)');
+  let tl_slideAway = gsap.timeline();
 
-  var hide = anime({
-      targets: document.querySelectorAll('.box:not(.showBox)'),
-      opacity: 0,
-      direction: 'normal',
-      duration: 600,
-      loop: false,
-      autoplay: true,
-      easing: 'easeInOutSine',
-      complete: function(anim) {
-        $(hideaway).hide();
-        slideIn();
-      }
-    });
+  tl_slideAway.to(hideaway, {
+    opacity: 0,
+    duration: 0.124,
+    ease: "sine.inOut",
+  })
+  .to(hideaway, {
+    duration: 0,
+    display: 'none'
+  });
+  // $(hideaway).hide();
+  // var hide = anime({
+  //     targets: document.querySelectorAll('.box:not(.showBox)'),
+  //     opacity: 0,
+  //     direction: 'normal',
+  //     duration: 600,
+  //     loop: false,
+  //     autoplay: true,
+  //     easing: 'easeInOutSine',
+  //     complete: function(anim) {
+  //       $(hideaway).hide();
+  //
+  //     }
+  //   });
+    slideIn();
 }
 function slideIn(){
-  var showIt = document.querySelector('.box.showBox');
-  $(showIt).css("opacity", "0");
+ let showIt = document.querySelector('.box.showBox');
+
+  let tl_showIt = gsap.timeline();
+  tl_showIt.set(showIt, { opacity: 0});
   $(showIt).show();
-   var show = anime({
-      targets: '.showBox',
-      opacity: [0,1],
-      direction: 'normal',
-      duration: 600,
-      loop: false,
-      autoplay: true,
-      easing: 'easeInOutSine',
-    });
+  tl_showIt.to(showIt, {
+    opacity: 1,
+    duration: 0.66,
+    ease: "sine.inOut"
+  });
+
+  // $(showIt).css("opacity", "0");
+  // $(showIt).show();
+  //  var show = anime({
+  //     targets: '.showBox',
+  //     opacity: [0,1],
+  //     direction: 'normal',
+  //     duration: 600,
+  //     loop: false,
+  //     autoplay: true,
+  //     easing: 'easeInOutSine',
+  //   });
 }

@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 // For Debugging & Diagnostics
 var screenobject = document.querySelector(".screeninfo");
 
@@ -69,7 +71,7 @@ var tl_pieGraph = gsap.timeline({
 // END PIE CHART ANIMATION
 // START PIE PIPELINE TIMELINE
 
-var tl_technology_mobile = gsap.timeline();
+const tl_technology_mobile = gsap.timeline();
 tl_technology_mobile
   .from(".phone-wrapper .phone",{
     duration: 1,
@@ -80,7 +82,7 @@ tl_technology_mobile
   }, "here")
   .add("end");
 
-var tl_interestRates = gsap.timeline();
+const tl_interestRates = gsap.timeline();
 tl_interestRates
   .from(".timeline-block .marker", {
     duration: 1
@@ -358,16 +360,27 @@ tl_piePipeline
   .to({}, {
     duration: 2
   })
-  .to("#moneydrop-5", {
-    duration: 2,
+
+  .addLabel("endofstory")
+  .to({}, {
+    duration: 2
+  });
+
+  var tl_lastDrop = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".container-piepipe",
+      start: "bottom center",
+      end: "+=10%",
+      markers: true,
+      scrub: true,
+      toggleActions: "play pause reverse resume",
+    },
+  });
+  tl_lastDrop.to("#moneydrop-5", {
     y: 150,
     opacity: 0,
     scale: 0,
     ease: "power1.inOut"
-  }, "+=3")
-  .addLabel("endofstory")
-  .to({}, {
-    duration: 2
   });
 // END PIE PIPELINE TIMELINE
 
@@ -413,6 +426,7 @@ tl_pieGraph.addLabel("piegraph--begin")
   }, "<")
 
   .addLabel("piegraph--end");
+
 
 // END PIEGRAPH TIMELINE
 // END SECTION 04 - PIE CHART //

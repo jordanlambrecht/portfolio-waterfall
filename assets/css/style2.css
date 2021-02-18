@@ -49,26 +49,6 @@ h1{
 h1.display-2{
   font-size: 5em;
 }
-@media (max-width: 575.98px) {
-  h1.display-2{
-    font-size: 2em;
-  }
-}
-@media (max-width: 767.98px) {
-  h1.display-2{
-    font-size: 3;
-  }
-}
-@media (max-width: 992px) {
-  h1.display-2{
-    font-size: 3.33em;
-  }
-}
-@media (max-width: 1199.98px) {
-  h1.display-2{
-    font-size: 3.33em;
-  }
-}
 @media (max-width: 1399.98px) {
   h1.display-2{
     font-size: 4em;
@@ -80,6 +60,29 @@ h1.display-2{
     font-size: 2.22em;
   }
 }
+@media (max-width: 1199.98px) {
+  h1.display-2{
+    font-size: 3.33em;
+  }
+}
+@media (max-width: 992px) {
+  h1.display-2{
+    font-size: 3.33em;
+  }
+}
+@media (max-width: 767.98px) {
+  h1.display-2{
+    font-size: 3;
+  }
+}
+@media (max-width: 575.98px) {
+  h1.display-2{
+    font-size: 2em;
+  }
+}
+
+
+
 .display-3.display-slideShow{
   font-size: 2.66em;
   font-family: "futura-pt", sans-serif;
@@ -244,7 +247,7 @@ svg.piegraph--label {
   transform: translateX(-12.5%);
   width: 150%;
 }
-
+/* TODO: Finish media queries for moneydrop-5 */
 @media (max-width: 575.98px){
   #pie-second,
   #pie-third,
