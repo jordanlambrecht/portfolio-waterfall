@@ -1,6 +1,6 @@
 <section class="container-fluid waves-section mx-0 px-0 ">
 <!--The Waves  -->
-<div class="waves-wrapper">
+<!-- <div class="waves-wrapper">
   <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
   <defs>
@@ -13,10 +13,10 @@
   <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
   </g>
   </svg>
-</div>
+</div> -->
 <!--  Area Below Waves   -->
-<div class="waves-content d-flex justify-content-center shadow-sm">
- <img src="https://assets.codepen.io/1274185/check.png" class="img-fluid gsap--hover" id="check" alt="blank check"/>
+<div class="container d-flex justify-content-end shadow-sm pb-4">
+ <img src="./assets/img/PF_RetirementCheck_v01.svg" class="img-fluid w-75 w-md-50" id="check" alt="blank check"/>
 </div>
 <!--Content ends-->
 </section>
