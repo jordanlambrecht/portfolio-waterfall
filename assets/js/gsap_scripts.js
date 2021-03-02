@@ -15,7 +15,149 @@ window.onload = reportWindowSize;
 gsap.registerPlugin(ScrollTrigger);
 // END INITIALIZATION //
 
-var tl_sectionOne = gsap.timeline({
+
+// REGISTER EFFECTS
+const gsapEffects = [
+  {
+    id: "slideIn",
+    animate: 'from',
+    props: {
+      opacity: 0,
+      scale: 1.022,
+      yPercent: 16,
+      ease: "back",
+      yoyo: false,
+      repeat: 0
+    }
+  },
+  {
+    id: "slideUp",
+    animate: 'from',
+    props: {
+      opacity: 0,
+      scale: 1.066,
+      xPercent: 16,
+      ease: "power3",
+      yoyo: false,
+      repeat: 0
+    }
+  },
+  {
+    id: "fade",
+    animate: 'from',
+    props: {
+      opacity: 0,
+      ease: "power3",
+      yoyo: false,
+      repeat: 0
+    }
+  },
+  {
+    id: "scaleUpFadeIn",
+    animate: 'from',
+    props: {
+      opacity: 0,
+      scale: 0,
+      ease: "power1.inOut",
+      yoyo: false,
+      repeat: 0
+    }
+  }
+];
+gsapEffects.forEach(effect => {
+  gsap.registerEffect({
+    name: effect.id,
+    defaults: { duration: 1 },
+    extendTimeline: true,
+    effect(targets, config) {
+      if(effect.animate === 'from'){
+        return gsap.from(targets, {...effect.props,...config })
+      }
+      else if (effect.animate === 'fromTo'){
+        return gsap.fromTo(targets, {...effect.props,...config }, {...effect.props2})
+        }
+      else {
+        return gsap.to(targets, {...effect.props,...config })
+      }
+    }
+  });
+});
+
+// What Limits animations
+var tl_sectionTwo_whatLimits = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#whatLimits",
+    start: "top +=25%",
+    // end: "+=45%",
+    toggleActions: "play pause restart reverse",
+  }
+});
+tl_sectionTwo_whatLimits
+  .fade("#whatLimits h1.display-2", { duration: 0.66 }, "+0.11")
+  .slideIn("#whatLimits .limits-card", { duration: 0.66, stagger: 1.33 }, "-0.11")
+  .slideIn("#whatLimits .limits-card h3", { duration: 0.44, ease: "back" }, "-0.11")
+  .slideIn("#whatLimits .limits-card h3 span", { duration: 0.22, ease: "back" }, "-0.11")
+  .slideIn("#whatLimits .limits-card img", { duration: 0.44, ease: "back" }, "-0.11")
+  .scaleUpFadeIn('#whatLimits .limits-mobile-iconbox .blocktest', { duration: 0.66, stagger: .22, ease: "back" }, "+0.33");
+
+
+// Strategy Slides Animation (Section 03)
+// Header of section 03
+var tl_sectionThree_header = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#strategy-mobile",
+    start: "top +=25%",
+    // end: "+=45%",
+    toggleActions: "play pause restart reverse",
+  }
+});
+tl_sectionThree_header
+  .from('#strategy-mobile h2.display-2', {
+    opacity: 0
+  });
+
+  // Section 03- MARKET VOLATILITY
+  const tl_sectionThree_marketVolatility = gsap.timeline();
+  tl_sectionThree_marketVolatility
+    .add("start")
+    .slideIn("#strat-market .strategy-card-mobile", {duration: .55}, "+=.33")
+    .slideUp("#strat-market .strategy-img-wrapper", {duration: .22},  "-=.1")
+    .slideUp("#strat-market h4", {duration: .22},  "-=.1")
+    .slideIn("#strat-market .strategy-mobile-logo-wrapper img", {duration: .66},  "-=.33")
+    .slideIn("#strat-market .strategy-mobile-logo-wrapper p", {duration: .66}, "-=.33")
+    .add("end");
+    ScrollTrigger.create( {
+      animation: tl_sectionThree_marketVolatility,
+      trigger: "#strategy-mobile",
+      start: "top center",
+      toggleActions: "play pause restart reverse",
+    });
+
+// Section 03- LOW INTEREST RATES
+const tl_sectionThree_lowInterestRates = gsap.timeline();
+tl_sectionThree_lowInterestRates
+  .add("start")
+  .slideIn("#strat-interest .strategy-card-mobile", {duration: .55}, "+=.33")
+  .slideUp("#strat-interest .strategy-img-wrapper", {duration: .22},  "-=.1")
+  .slideUp("#strat-interest h4", {duration: .22},  "-=.1")
+  .slideIn("#strat-interest .strategy-mobile-logo-wrapper img", {duration: .66},  "-=.33")
+  .slideIn("#strat-interest .strategy-mobile-logo-wrapper p", {duration: .66}, "-=.33")
+  .add("end");
+
+const tl_sectionThree_longevity = gsap.timeline();
+tl_sectionThree_longevity
+  .add("start")
+  .slideIn("#strat-longevity .strategy-card-mobile", {duration: .55}, "+=.33")
+  .slideUp("#strat-longevity .strategy-img-wrapper", {duration: .33},  "-=.1")
+  .slideUp("#strat-longevity h4", {duration: .22},  "-=.1")
+  .slideIn("#strat-longevity .strategy-mobile-logo-wrapper img", {duration: .66},  "-=.33")
+  .slideIn("#strat-longevity .strategy-mobile-logo-wrapper p", {duration: .66}, "-=.33")
+  .add("end");
+
+// End Strat slideShow
+
+// Things Change Animations (Section 01)
+const tl_sectionOne = gsap.timeline({
   scrollTrigger: {
     trigger: "#thingsChange",
     start: "top center",
@@ -25,28 +167,36 @@ var tl_sectionOne = gsap.timeline({
   }
 });
 tl_sectionOne
-  .from('#thingsChangeHeader', {
-    opacity: 0
-  })
+  .fade('#thingsChangeHeader')
   .from('ul.showslides li', {
     opacity: 0,
     y: -30,
-    stagger: 0.2
+    stagger: 0.33
   });
 
-var tl_sectionOne_mobile = gsap.timeline();
+const tl_sectionOne_mobile = gsap.timeline();
 tl_sectionOne_mobile
+  .add("here")
   .from('#thingsChangeHeader--mobile', {
+    duration: 1,
     opacity: 0,
     ease: "power3"
-  }, "here")
+  }, "+=.25")
   .from('ul.showslides-mobile li', {
-    opacity: 1,
-    y: 0,
+    opacity: 0,
+    yPercent: 20,
     stagger: 0.2,
-    ease: "power3"
+    ease: "back"
   })
   .add("end");
+
+  ScrollTrigger.create( {
+    animation: tl_sectionOne_mobile,
+    trigger: "#thingschangemobile",
+    start: "top center",
+    // toggleActions: "play pause reverse restart"
+     toggleActions: "play reverse restart reverse"
+  });
 // ANIMATE SECTION 04 - PIE CHART //
 
 var tl_pieGraph = gsap.timeline({
@@ -73,19 +223,14 @@ var tl_pieGraph = gsap.timeline({
 
 const tl_technology_mobile = gsap.timeline();
 tl_technology_mobile
-  .from(".phone-wrapper .phone",{
-    duration: 1,
-    scale: 0,
-    opacity: 0,
-    stagger: 0.333,
-    ease: "back"
-  }, "here")
+  .add("here")
+  .fade(".showslides--mobile h3", {duration: .33}, "+=.22")
+  .scaleUpFadeIn(".phone-wrapper .phone",{ duration: .66, stagger: 0.533, ease: "back"}, "-=.15")
   .add("end");
 
 const tl_interestRates = gsap.timeline();
 tl_interestRates
-  .from(".timeline-block .marker", {
-    duration: 1
+  .from(".timeline-block .marker", {duration: 1
   }, "animpause")
   .from(".timeline-block .marker", {
     duration: 1,
@@ -189,25 +334,13 @@ tl_piePipeline
     scale: 0,
     ease: "power1.inOut"
   })
-  .from("#pie-first svg g.text", {
-    duration: 1,
-    opacity: 0,
-    scale: 0,
-    ease: "power1.inOut"
-  })
-  .from("#moneydrop-1", {
-    duration: 2,
-    opacity: 0,
-    scale: 0,
-    ease: "power1.inOut"
-  }, "+=1")
-
+  .scaleUpFadeIn("#pie-first svg g.text", { duration:  1 })
+  .scaleUpFadeIn("#moneydrop-1", { duration:  2 }, "+=1")
   // 	second
   .addLabel("second")
   .to({}, {
     duration: 2
   })
-
   .from("#pie-second svg", {
     duration: 3,
     x: -700,
@@ -222,12 +355,8 @@ tl_piePipeline
     scale: 0,
     ease: "power1.inOut"
   })
-  .from("#pie-second svg g.text", {
-    duration: 0.33,
-    opacity: 0,
-    scale: 0,
-    ease: "power1.inOut"
-  })
+  .scaleUpFadeIn("#pie-second svg g.text", { duration:  0.33 })
+
   .to("#moneydrop-1", {
     duration: 1,
     y: 150,
@@ -235,18 +364,11 @@ tl_piePipeline
     scale: 0,
     ease: "power1.inOut"
   })
-  .from("#moneydrop-2", {
-    duration: 2,
-    opacity: 0,
-    scale: 0,
-    ease: "power1.inOut"
-  })
+  .scaleUpFadeIn("#moneydrop-2", { duration: 2 })
 
   // 	Third
   .addLabel("third")
-  .to({}, {
-    duration: 2
-  })
+  .to({}, { duration: 2 })
 
   .from("#pie-third svg", {
     duration: 3,
@@ -262,12 +384,7 @@ tl_piePipeline
     scale: 0,
     ease: "power1.inOut"
   })
-  .from("#pie-third svg g.text", {
-    duration: 0.33,
-    opacity: 0,
-    scale: 0,
-    ease: "power1.inOut"
-  })
+  .scaleUpFadeIn("#pie-third svg g.text", { duration: 0.33 })
   .to("#moneydrop-2", {
     duration: 1,
     y: 150,
@@ -275,19 +392,12 @@ tl_piePipeline
     scale: 0,
     ease: "power1.inOut"
   })
-  .from("#moneydrop-3", {
-    duration: 2,
-    opacity: 0,
-    scale: 0,
-    ease: "power1.inOut"
-  })
+  .scaleUpFadeIn("#moneydrop-3", { duration: 2 })
+
 
   // fourth
   .addLabel("fourth")
-  .to({}, {
-    duration: 2
-  })
-
+  .to({}, { duration: 2 })
   .from("#pie-fourth svg", {
     duration: 3,
     x: -700,
@@ -302,12 +412,7 @@ tl_piePipeline
     scale: 0,
     ease: "power1.inOut"
   })
-  .from("#pie-fourth svg g.text ", {
-    duration: 0.33,
-    opacity: 0,
-    scale: 0,
-    ease: "power1.inOut"
-  })
+  .scaleUpFadeIn("#pie-fourth svg g.text", { duration:  0.33 })
   .to("#moneydrop-3", {
     duration: 1,
     y: 150,
@@ -315,18 +420,11 @@ tl_piePipeline
     scale: 0,
     ease: "power1.inOut"
   }, "+=1")
-  .from("#moneydrop-4", {
-    duration: 2,
-    opacity: 0,
-    scale: 0,
-    ease: "power1.inOut"
-  })
+  .scaleUpFadeIn("#moneydrop-4", { duration:  2 })
 
   // fifth
   .addLabel("fifth")
-  .to({}, {
-    duration: 2
-  })
+  .to({}, { duration: 2 })
 
   .from("#pie-fifth svg", {
     duration: 3,
@@ -351,20 +449,10 @@ tl_piePipeline
 
   // final
   .addLabel("final")
-  .from("#moneydrop-5", {
-    duration: 1,
-    opacity: 0,
-    scale: 0,
-    ease: "power1.inOut"
-  }, "+=1")
-  .to({}, {
-    duration: 2
-  })
-
+  .scaleUpFadeIn("#moneydrop-5", { duration:  1 }, "+=1")
+  .to({}, { duration: 2 })
   .addLabel("endofstory")
-  .to({}, {
-    duration: 2
-  });
+  .to({}, { duration: 2 });
 
   var tl_lastDrop = gsap.timeline({
     scrollTrigger: {
@@ -384,30 +472,13 @@ tl_piePipeline
 // END PIE PIPELINE TIMELINE
 
 
-tl_pieGraph.addLabel("piegraph--begin")
-  .from("svg#piegraph g", {
-    duration: 1.66,
-    opacity: 0,
-    scale: 0,
-    stagger: 0.3,
-    ease: "back"
-  } )
-
+tl_pieGraph
+  .addLabel("piegraph--begin")
+  .scaleUpFadeIn("svg#piegraph g", { duration:  1.66, ease: "back", stagger: 0.33 })
   .addLabel("piegraph--labels")
-
-  .from("svg#piegraph--label g", {
-    duration: 1.66,
-    opacity: 0,
-    scale: 0,
-    stagger: 1,
-    ease: "back"
-  }, "+=3")
-
+  .scaleUpFadeIn("svg#piegraph--label g", { duration:  1.66, ease: "back", stagger: 1 }, "+=3")
   .addLabel("piegraph--finished")
-  .to({}, {
-    duration: 12
-  })
-
+  .to({}, { duration: 12})
   .to("svg#piegraph g", {
     duration: 1.66,
     opacity: 0,
@@ -415,7 +486,6 @@ tl_pieGraph.addLabel("piegraph--begin")
     stagger: 0.3,
     ease: "back"
   })
-
   .to("svg#piegraph--label g", {
     duration: 3,
     opacity: 0,
@@ -423,48 +493,12 @@ tl_pieGraph.addLabel("piegraph--begin")
     stagger: 0.3,
     ease: "back"
   }, "<")
-
   .addLabel("piegraph--end");
 
 
 // END PIEGRAPH TIMELINE
 // END SECTION 04 - PIE CHART //
 
-// ANIMATE FOOTER WAVES //
-
-var tlCheckBounce = new TimelineMax({
-  repeat: -1
-});
-
-
-
-tlCheckBounce
-  .to(".gsap--hover", 1, {})
-  .to(".gsap--hover", 4, {
-    y: '-=20',
-    rotation: '+=2.33',
-    ease: Sine.easeInOut
-  })
-  .to(".gsap--hover", 1, {})
-  .to(".gsap--hover", 4, {
-    y: '+=20',
-    rotation: '0',
-    ease: Power1.easeInOut
-  })
-  .to(".gsap--hover", 1, {})
-  .to(".gsap--hover", 4, {
-    y: '-=20',
-    rotation: '-=2.33',
-    ease: Sine.easeInOut
-  })
-  .to(".gsap--hover", 1, {})
-  .to(".gsap--hover", 4, {
-    y: '+=20',
-    rotation: '0',
-    ease: Power1.easeInOut
-  });
-
-// END FOOTER WAVES //
 
 // HEADER //
 
@@ -520,7 +554,6 @@ tl_header
     yPercent: -50,
     ease: 'none'
   }, 0)
-
   .fromTo('#landing-logo', {
     opacity: 1,
     scale: 1,
@@ -572,7 +605,7 @@ gsap.timeline({
       trigger: '.content',
       start: 'bottom bottom',
       end: '+=66%',
-      scrub: true
+      scrub: 2
     }
   })
   .to('section.footer-container', {

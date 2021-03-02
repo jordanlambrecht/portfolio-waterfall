@@ -1,7 +1,7 @@
 console.log("Website developed with love by Pixel Bakery Design Studio in Lincoln, NE. https://pixelbakery.com");
 
 // individual slide animations
-var slides = function slides(i) {
+var thingsChangeSlides = function thingsChangeSlides(i) {
   switch(i) {
     case 1:
       console.log("slide " + i);
@@ -26,26 +26,61 @@ var slides = function slides(i) {
     }
   };
 
+  // individual slide animations
+  var strategySlides = function strategySlides(i) {
+    switch(i) {
+      case 1:
+        console.log("slide " + i);
+        tl_sectionThree_marketVolatility.tweenFromTo("start", "end");
+      break;
+      case 2:
+        console.log("slide " + i);
+        tl_sectionThree_lowInterestRates.tweenFromTo("start", "end");
+      break;
+      case 3:
+        console.log("slide " + i);
+        tl_sectionThree_longevity.tweenFromTo("start", "end");
+      break;
+      }
+    };
 
 
-// element argument can be a selector string
-//   for an individual element
-var slideFlickity = function slideFlickity() {
+// section_01_thingsChange_mobile Flickity
+var thingsChangeFlickity = function thingsChangeFlickity() {
   var flkty = new Flickity( '.thingsChange-mobile', {
     cellAlign: 'center',
     contain: true,
     wrapAround: true,
     watchCSS: true
   });
-  slideClick(flkty);
+  thingsChangeClick(flkty);
 };
 
 
-var slideClick = function slideClick(flkty) {
+var thingsChangeClick = function thingsChangeClick(flkty) {
   flkty.on( 'select', function( index ) {
     var incIndex = this.selectedIndex + 1;
-     slides(incIndex);
+     thingsChangeSlides(incIndex);
   });
 };
+thingsChangeFlickity();
 
-slideFlickity();
+// section_03_strategy_mobile flickity
+var strategyFlickity = function strategyFlickity() {
+  var flkty = new Flickity( '.strategy-mobile', {
+    cellAlign: 'center',
+    contain: true,
+    wrapAround: true,
+    watchCSS: true
+  });
+  strategyClick(flkty);
+};
+
+
+var strategyClick = function strategyClick(flkty) {
+  flkty.on( 'select', function( index ) {
+    var incIndex = this.selectedIndex + 1;
+     strategySlides(incIndex);
+  });
+};
+strategyFlickity();
