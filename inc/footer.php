@@ -1,11 +1,10 @@
 </div>
 <footer class="footer">
-  <section class="footer-container pt-1 d-flex justify-content-start">
-    <div class="container d-flex  mb-2 mt-0 pt-1 flex-column ">
+  <section class="footer-container pt-1 px-2 d-flex justify-content-start">
+    <div class="container d-flex flex-column justify-content-between mb-2 mt-0 pt-1">
       <div class="row pb-1 ">
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 footer-content py-2  pt-sm-3 py-md-5">
           <h1 class="text-uppercase color--white display-2 fw-b text-center text-md-start">Don't Let Your Portfolio Dry Up.</h1>
-
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5 offset-lg-2 mb-2 mt-0 pt-1 d-flex flex-column">
           <div class="row d-flex justify-content-center">
@@ -39,9 +38,6 @@
             </div>
           </div>
         </div>
-
-
-
       </div>
       <!-- Copyright Info -->
       <div class="row  ">
@@ -63,22 +59,21 @@
     </div>
   </section>
 </footer>
-
+<div class="progress-wrap">
+  <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+    <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+  </svg>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-
-<!--
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script> -->
-
 <!-- partial -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 <script src="https://bundle.run/css-scroll-snap-polyfill@0.1.2"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js'></script>
-<script src="./assets/js/flickity.pkgd.min.js"></script>
-
-
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script src="./assets/js/showSlides.js"></script>
-<script  src="./assets/js/gsap_scripts.js"></script>
+<script src="./assets/js/gsap_scripts.js"></script>
+<script src="./assets/js/backtotop.js"></script>
 <script src="./assets/js/general_scripts.js"></script>
 
 </body>
