@@ -1,8 +1,5 @@
 
 :root {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
   --color--light-yellow: #e0e895;
   --color--dark-green: #699e42;
   --color--light-green: #95c64f;
@@ -11,6 +8,7 @@
   --color--white: #fff;
   --color--off-blue: #4c7fcc;
   --color--dark-blue: #1b75bb;
+  --color--trans-black: rgba(33, 34, 40, 0.5);
 }
 
 /* colors */
@@ -21,6 +19,7 @@
 .color--off-blue { color: var(--color--off-blue); }
 .color--dark-blue { color: var(--color--dark-blue); }
 .color--black { color: var(--color--black); }
+.color--trans-black { color: rgba(33, 34, 40, 1); }
 .color--white { color: var(--color--white); }
 
 /* borders */
