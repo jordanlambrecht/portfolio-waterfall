@@ -1,4 +1,4 @@
-<section class="container-fluid vh-100 py-0 d-flex flex-column  justify-content-around d-lg-none my-0 px-0 bg--light-blue"  id="strategy-mobile">
+<section class="chapter chapter-mobile container-fluid vh-100 py-0 d-flex flex-column justify-content-around d-block d-lg-none my-0 px-0 bg--light-blue"  id="strategy-mobile" data-section-name="The PF Strategy">
 
   <div class=" px-4 pt-4 ">
     <h2 class="display-2 color--white text-center">What Limits Withdrawal Rates?</h2>

@@ -1,4 +1,4 @@
-<section class="container-fluid d-none d-lg-block vh-100 py-0 my-0 px-0  position-relative "  id="strategy">
+<section class="chapter container-fluid d-none d-lg-block vh-100 py-0 my-0 px-0  position-relative "  id="strategy" data-section-name="The PF Method">
 
   <div class="position-absolute top-0 start-50  translate-middle-x w-75 w-md-50 px-4 py-3 ">
     <h2 class="display-2 color--white text-center">What Limits Withdrawal Rates?</h2>
@@ -19,7 +19,7 @@
         <div class="general-card shadow py-2 px-3 mt-2 mb-4 w-75">
           <img src="./assets/img/PW_PrimaryLogo_Dark_v01.svg" alt="Portfolio Waterfall Logo" class="img-fluid pb-3 px-4" />
           <p class="text-center fst-italic px-3 fs-5 fw-bold lh-1 color--black">
-             </br>Limits Sequence of Returns</br>
+          </br>Limits <br class="d-xl-none" />Sequence of Returns</br>
           </p>
         </div>
       </div>

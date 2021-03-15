@@ -17,6 +17,43 @@
   <link rel="stylesheet" href="./assets/css/pb-style.css">
   <link rel="stylesheet" href="./assets/css/backtotop.css">
   <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css" />
+
 </head>
-<body>
+<body id="fullpage" data-bs-spy="scroll" data-bs-target="#sectionMenu" data-bs-offset="0" tabindex="0">
+
   <!-- <div class="screeninfo"></div> -->
+
+
+<!-- <nav id="sectionMenu">
+
+  <div id="list-example" class="list-group">
+    <div class="list-group-item list-group-item-action">
+      <a  href="#introduction">Introduction</a>
+    </div>
+    <a class="list-group-item list-group-item-action" href="#thingsChange">Things Change</a>
+    <a class="list-group-item list-group-item-action" href="#whatLimits">What Limits</a>
+    <a class="list-group-item list-group-item-action" href="#strategy">Strategy</a>
+    <a class="list-group-item list-group-item-action" href="#piechart">Pie Chart</a>
+    <a class="list-group-item list-group-item-action" href="#piepipes">Pie Pipes  </a>
+</div>
+</nav> -->
+<nav id="sectionMenu">
+
+
+
+<ul class="nav flex-column">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#introduction"><span class="sectionMenu--circle"></span>Introduction</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#thingsChange"><span class="sectionMenu--circle"></span>Things Change</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#whatLimits"><span class="sectionMenu--circle"></span>What Limits</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#strategy"><span class="sectionMenu--circle"></span>Strategy</a>
+  </li>
+</ul>
+
+</nav>

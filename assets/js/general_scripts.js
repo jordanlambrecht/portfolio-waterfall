@@ -1,4 +1,58 @@
 console.log("Website developed with love by Pixel Bakery Design Studio in Lincoln, NE. https://pixelbakery.com");
+// import PanelSnap from 'panelsnap';
+
+
+// For Debugging & Diagnostics
+  // const screenObject = document.querySelector(".screeninfo");
+  //
+  // function reportWindowSize() {
+  //   screenObject.innerHTML = window.innerWidth + " x " + window.innerHeight;
+  // }
+  // window.onresize = reportWindowSize();
+  // window.onload = reportWindowSize();
+  // window.addEventListener('resize', reportWindowSize);
+
+
+
+// END DEBUGGING //
+
+
+// SIDE NAV
+//
+// const sections =  document.querySelectorAll('section.chapter ');
+// const sectionsMenu = document.getElementById("sectionMenu");
+// const sectionMenuUL = document.createElement("ul");
+// sectionMenuUL.classList.add("nav");
+// sectionMenuUL.classList.add("flex-column");
+//
+// function iterate(section, index) {
+//    let listItem = document.createElement("LI");
+//    listItem.classList.add("nav-item");
+//    listItem.id = "scrollTo--" + index;
+//
+//    let listLink = document.createElement("A");
+//    listLink.href = "#" + section.id;
+//    listLink.classList.add("nav-link");
+//
+//    let listCircle = document.createElement("Span");
+//     listCircle.classList.add("sectionMenu--circle");
+//    listLink.appendChild(listCircle);
+//
+//
+//    let listContent = document.createTextNode(section.dataset.sectionName);
+//    listLink.appendChild(listContent);
+//    console.log(section.dataset.sectionName);
+//    listItem.appendChild(listLink);
+//    sectionMenuUL.appendChild(listItem);
+//   console.log("#" + section.id + " | " + section.dataset.sectionName + ' has index ' + index );
+// }
+// sections.forEach((iterate));
+// sectionMenu.appendChild(sectionMenuUL);
+
+
+// END SIDE NAV
+
+
 
 // individual slide animations
 var thingsChangeSlides = function thingsChangeSlides(i) {
@@ -84,3 +138,15 @@ var strategyClick = function strategyClick(flkty) {
   });
 };
 strategyFlickity();
+//
+// document.addEventListener("DOMContentLoaded", function() {
+//           var defaultOptions = {
+//             container: document.getElementsByTagName("MAIN")[0],
+//             panelSelector: 'main section',
+//             directionThreshold: 50,
+//             delay: 0,
+//             duration: 300,
+//             easing: function(t) { return t },
+//           };
+//           new PanelSnap();
+//         });

@@ -1,4 +1,4 @@
-<section class="container-fluid waves-section mx-0 px-0 ">
+<section class="container-fluid waves-section mx-0 px-0 pb-5">
 <!--The Waves  -->
 <!-- <div class="waves-wrapper">
   <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -15,7 +15,7 @@
   </svg>
 </div> -->
 <!--  Area Below Waves   -->
-<div class="container d-flex justify-content-end shadow-sm pb-4">
+<div class="container d-flex justify-content-end  pb-4">
  <img src="./assets/img/PF_RetirementCheck_v01.svg" class="img-fluid w-75 w-md-50" id="check" alt="blank check"/>
 </div>
 <!--Content ends-->

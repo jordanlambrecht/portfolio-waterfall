@@ -1,4 +1,4 @@
-<section class="container-fluid piepipes">
+<section class="chapter chapter-mobile container-fluid piepipes" data-section-name="Detailed Breakdown" id="piepipes">
   <div class="container container-piepipe py-5">
     <div class="row">
       <div class="col-10 col-sm-10 col-md-9 col-lg-8 col-xl-7 col-xxl-6">
@@ -37,7 +37,11 @@
     <!--   fifth - short duration bonds  -->
 
         <div class="piepipe-wrapper position-relative" id="pie-fifth">
-          <img id="moneydrop-5" class=" moneydrop" src="../assets/img/moneydroplet.svg" alt="droplet of liquid equity"/>
+          <div class="splash-wrapper">
+            <canvas id="hero-lightpass" />
+          </div>
+
+          <!-- <img id="moneydrop-5" class=" moneydrop" src="../assets/img/moneydroplet.svg" alt="droplet of liquid equity"/> -->
           <?php include_once('./inc/pie-fifth.php'); ?>
         </div>
      </div>

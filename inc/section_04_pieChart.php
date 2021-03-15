@@ -1,5 +1,5 @@
 <!-- 		START     Piegraph Section	-->
-<section class="container-fluid piegraph">
+<section class="chapter chapter-mobile container-fluid piegraph" data-section-name="Pie Chart" id="piechart">
 	<div class="container container-piegraph py-2">
 
 
