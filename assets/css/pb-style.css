@@ -19,6 +19,7 @@ body {
   -webkit-overflow-scrolling: touch;
   font-family: "Signika Negative", sans-serif, Arial;
   scroll-behavior: smooth !important;
+  max-width: 100%;
 }
 
 body {
@@ -74,8 +75,14 @@ main section:not(.waves-section) {
   transform: translate(72%, -50%);
 }
 
-x #sectionMenu:hover {
+#sectionMenu:hover {
   transform: translate(0%, -50%);
+}
+
+@media (max-width: 575.98px) {
+  #sectionMenu {
+    display: none;
+  }
 }
 
 #sectionMenu ul.nav li.nav-item {
@@ -151,6 +158,7 @@ li {
 }
 
 h1.display-2 {
+  text-transform: uppercase;
   font-size: 5em;
   margin-top: 2em;
 }
@@ -256,7 +264,17 @@ section.header-container {
 }
 
 #landing-tagline {
-  margin-right: -1.333em;
+  font-weight: 600;
+  margin-top: 2em;
+  margin-right: -2.555em;
+}
+
+@media (max-width: 768px) {
+  #landing-tagline {
+    margin-right: 0;
+    margin-top: 1.5em;
+    font-weight: 500;
+  }
 }
 
 /* SCROLL DOWN */
@@ -533,14 +551,14 @@ canvas#hero-lightpass {
 /* NOTE: FOOTER STYLING */
 
 footer {
-  height: 75vh;
+  height: 100vh;
   width: 100vw;
   background-color: var(--color--black);
   overflow: hidden;
 }
 
 section.footer-container {
-  height: 75vh;
+  height: 100vh;
   color: #f0f0f0;
   background:
     radial-gradient(circle, rgba(2, 0, 36, 0.48783263305322133) 33%, rgba(2, 0, 36, 0.12) 75%),
@@ -548,10 +566,6 @@ section.footer-container {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .footer-copyright a {
@@ -594,7 +608,8 @@ section.footer-container {
   object-fit: contain;
 }
 
-.wrapper-logo {
+.wrapper-logo,
+.footer-card {
   width: 100%;
   max-width: 712px;
 }
@@ -766,6 +781,7 @@ section.footer-container {
   }
 }
 
+/*
 .phone {
   animation: hoverbob 5s ease-in-out 0s alternate infinite;
 }
@@ -782,7 +798,7 @@ section.footer-container {
   to {
     transform: translateY(10%) rotate(3deg);
   }
-}
+} */
 
 ul.showslides li {
   cursor: pointer;
@@ -1003,13 +1019,19 @@ ul.showslides li#stockmarket.selected svg > * {
 }
 
 .timeline-content h4.display-3 {
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: 600;
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 768px) {
+  .timeline-content h4.display-3 {
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 1200px) {
   .timeline-content h4.display-3 {
     font-size: 3em;
   }

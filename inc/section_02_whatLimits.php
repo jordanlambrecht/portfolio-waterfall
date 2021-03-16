@@ -1,8 +1,8 @@
 <section class="chapter chapter-mobile section container-fluid mx-0 vh-md-100 bg--light-blue py-5 px-0 " id="whatLimits" data-section-name="Retirement Income">
   <div class="container h-100 d-flex flex-column">
     <div class="row mb-4 w-100">
-      <div class="col-12 mt-5 mb-3 col-12 text-center">
-        <h1 class="display-2 color--white">RETIREMENT INCOME
+      <div class="col-12 mt-5 mb-3 col-12 text-center d-flex justify-content-center">
+        <h1 class="display-2 color--white text-center">RETIREMENT INCOME<br />
   WITHDRAWAL RATES</h1>
       </div>
     </div>
