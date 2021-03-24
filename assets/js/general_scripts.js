@@ -1,19 +1,28 @@
 console.log("Website developed with love by Pixel Bakery Design Studio in Lincoln, NE. https://pixelbakery.com");
-// import PanelSnap from 'panelsnap';
+
 
 
 // For Debugging & Diagnostics
-  // const screenObject = document.querySelector(".screeninfo");
-  //
-  // function reportWindowSize() {
-  //   screenObject.innerHTML = window.innerWidth + " x " + window.innerHeight;
-  // }
-  // window.onresize = reportWindowSize();
-  // window.onload = reportWindowSize();
-  // window.addEventListener('resize', reportWindowSize);
-
-
-
+// Start of Screen Size Debugging Tool
+// const screenObject = document.querySelector(".screeninfo");
+// function reportWindowSize() {
+//   let h = window.innerHeight;
+//   let w = window.innerWidth;
+//   let screenSize = "XS Screen (<575.98)";
+//   switch (true){
+//       case (w >= 1400):  screenSize = "XXL Screen (1400)";   break;
+//       case (w >= 1200):  screenSize = "XL Screen (1200px)";  break;
+//       case (w >= 992):   screenSize = "LG Screen (992px)";   break;
+//       case (w >= 768):   screenSize = "MD Screen (768px)";   break;
+//       case (w >= 576):   screenSize = "SM Screen (576px)";   break;
+//       default:          screenSize = "XS Screen (<575.98)"; break;
+//   }
+//   screenObject.innerHTML = w + " x " + h + " | " + screenSize;
+// }
+// window.onresize = reportWindowSize();
+// window.onload = reportWindowSize();
+// window.addEventListener('resize', reportWindowSize);
+// End of Screen Size Debugging Tool
 // END DEBUGGING //
 
 
