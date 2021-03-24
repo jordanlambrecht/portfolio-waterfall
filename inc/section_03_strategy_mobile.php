@@ -3,7 +3,7 @@
   <div class=" px-4 pt-4 ">
     <h2 class="display-2 color--white text-center">What Limits Withdrawal Rates?</h2>
   </div>
-  <div class="flex-fill m-0 p-0 strategy-mobile">
+  <div class="h-100 m-0 p-0 strategy-mobile">
 
     <!-- Market Volatility -->
     <div class="carousel-cell w-100 pb-3 h-100 bg--lightblue-to-darkblue">
