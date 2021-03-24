@@ -41,6 +41,42 @@ const gsapEffects = [
     }
   },
   {
+  id: "dropletIn",
+  animate: 'from',
+  props:{
+    opacity:0,
+    yPercent: -15,
+    scale: 0.95,
+    ease: "power1",
+    yoyo: false,
+    repeat: 0
+  }
+},
+{
+  id: "dropletFall",
+  animate: 'to',
+  props:{
+    opacity: 0,
+    scale: .88,
+    x: 12,
+    yPercent: 300,
+    ease: "none",
+    yoyo: false,
+    repeat: 0
+  }
+},
+  {
+    id: "slideDown",
+    animate: 'from',
+    props: {
+      opacity: 0,
+      yPercent: -25,
+      ease: "power3",
+      yoyo: false,
+      repeat: 0
+    }
+  },
+  {
     id: "fade",
     animate: 'from',
     props: {
@@ -69,13 +105,13 @@ gsapEffects.forEach(effect => {
     extendTimeline: true,
     effect(targets, config) {
       if(effect.animate === 'from'){
-        return gsap.from(targets, {...effect.props,...config })
+        return gsap.from(targets, {...effect.props,...config });
       }
       else if (effect.animate === 'fromTo'){
-        return gsap.fromTo(targets, {...effect.props,...config }, {...effect.props2})
+        return gsap.fromTo(targets, {...effect.props,...config }, {...effect.props2});
         }
       else {
-        return gsap.to(targets, {...effect.props,...config })
+        return gsap.to(targets, {...effect.props,...config });
       }
     }
   });
@@ -86,15 +122,21 @@ gsapEffects.forEach(effect => {
 const splashCanvas = document.getElementById("hero-lightpass");
 const sContext = splashCanvas.getContext("2d");
 
-splashCanvas.width = 856*2;
-splashCanvas.height = 250*2;
+splashCanvas.width = 863.8;
+splashCanvas.height = 370;
+
+const rootSplashPath = '../assets/img/splashFrames/';
+
+const splashVersion = 'v06';
+const splashPrefix = 'PW_' + splashVersion + '_splash_';
+const splashFType = '.svg';
+
 
 const splashFrameCount = 12;
-const splashCurrentFrame = index => (
-  `./assets/PW_splash_${(index + 1).toString().padStart(2, '0')}.svg`
+const splashCurrentFrame = index => ( rootSplashPath + splashPrefix + `${(index + 1).toString().padStart(2, '0')}` + splashFType
 );
 
-const splashImages = []
+const splashImages = [];
 const splash = {
   frame: 0
 };
@@ -102,18 +144,19 @@ const splash = {
 for (let i = 0; i < splashFrameCount; i++) {
   const splashImg = new Image();
   splashImg.src = splashCurrentFrame(i);
+  splashImg.alt = "Portfolio Waterfall increases retirement income";
   splashImages.push(splashImg);
-  console.log(splashImg.src);
+  // console.log(splashImg.src);
 }
 
-const splash_tl = gsap.timeline({ paused: true, })
-.add("splashStart")
+let splash_tl = gsap.timeline({ paused: true })
+.addLabel("splashStart")
 .to(splash, {
   frame: splashFrameCount - 1,
   snap: "frame",
   onUpdate: render // use animation onUpdate instead of scrollTrigger's onUpdate
-})
-.add("splashEnd");
+}, "splash")
+.addLabel("splashEnd");
 
 splashImages[0].onload = render;
 
@@ -122,13 +165,6 @@ function render() {
   sContext.drawImage(splashImages[splash.frame], 0, 0);
 }
 // End Splash Animation
-
-//
-// let h1 = document.querySelector("h1"),
-//     hover = gsap.to(h1, {scale: 1.12, color: "blue", duration: 1.5, paused: true, ease: "power1.inOut"});
-//
-// h1.addEventListener("mouseenter", () => hover.play());
-// h1.addEventListener("mouseleave", () => hover.reverse());
 
 const sectionMenu_tl = gsap.timeline();
 sectionMenu_tl
@@ -234,88 +270,6 @@ tl_header
 // tl_header.reverse("withoutScroll");
 // END HEADER //
 
-// What Limits Mobile animations
-var tl_sectionTwo_whatLimits = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#whatLimits",
-    start: "top +=25%",
-    toggleActions: "play pause restart reverse",
-  }
-});
-tl_sectionTwo_whatLimits
-  .fade("#whatLimits h1.display-2", { duration: 0.33 }, "+=0.11")
-  .fade("#whatLimits #limits-card-01", { duration: 0.2 })
-  .slideIn("#whatLimits #limits-card-01 .limits-card", { duration: 0.66, y:100})
-  .slideIn("#whatLimits #limits-card-01 .limits-card h3", { duration: 0.44, ease: "back" }, "+=.15")
-  .fade("#whatLimits  #limits-card-01 .limits-card h3 span", { duration: 0.33, ease: "back" }, "+=0.11")
-  .slideIn("#whatLimits  #limits-card-01 .limits-card img", { duration: 0.44, ease: "back" }, "+=.33")
-
-  .fade("#whatLimits #whatlimits-iconbox-desktop", {duration: 0.22})
-  .fade("#whatLimits #whatlimits-iconbox-mobile", "<")
-  .slideIn("#whatLimits #whatlimits-iconbox-desktop .image-column", { duration: 1, stagger:0.22, ease: "back"}, "-=.15")
-  .slideIn("#whatLimits #whatlimits-iconbox-mobile .blocktest", { duration: 1, stagger:0.22, ease: "back"}, "<")
-
-  .fade("#whatLimits #limits-card-02", { duration: 0.2 })
-  .slideIn("#whatLimits #limits-card-02 .limits-card", { duration: 0.66, y:100, ease:"power3.inOut"}, "+=.25")
-  .slideIn("#whatLimits #limits-card-02 .limits-card h3", { duration: 0.44, ease: "back" }, "+=.15")
-  .fade("#whatLimits  #limits-card-02 .limits-card h3 span", { duration: 0.33, ease: "back" }, "+=0.11")
-  .slideIn("#whatLimits  #limits-card-02 .limits-card img", { duration: 0.44, ease: "back" }, "+=.33");
-
-// Strategy Slides Animation (Section 03)
-// Header of section 03
-var tl_sectionThree_header = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#strategy-mobile",
-    start: "top +=25%",
-    // end: "+=45%",
-    toggleActions: "play pause restart reverse",
-  }
-});
-tl_sectionThree_header
-  .from('#strategy-mobile h2.display-2', {
-    opacity: 0
-  });
-
-  // Section 03- MARKET VOLATILITY MOBILE
-const tl_sectionThree_marketVolatility = gsap.timeline();
-tl_sectionThree_marketVolatility
-  .add("start")
-  .slideIn("#strat-market .strategy-card-mobile", {duration: .55}, "+=.33")
-  .slideUp("#strat-market .strategy-img-wrapper", {duration: .22},  "-=.1")
-  .slideUp("#strat-market h4", {duration: .22},  "-=.1")
-  .slideIn("#strat-market .strategy-mobile-logo-wrapper img", {duration: .66},  "-=.33")
-  .slideIn("#strat-market .strategy-mobile-logo-wrapper p", {duration: .66}, "-=.33")
-  .add("end");
-  ScrollTrigger.create( {
-    animation: tl_sectionThree_marketVolatility,
-    trigger: "#strategy-mobile",
-    start: "top center",
-    toggleActions: "play pause restart reverse",
-  });
-
-// Section 03- LOW INTEREST RATES
-const tl_sectionThree_lowInterestRates = gsap.timeline();
-tl_sectionThree_lowInterestRates
-  .add("start")
-  .slideIn("#strat-interest .strategy-card-mobile", {duration: .55}, "+=.33")
-  .slideUp("#strat-interest .strategy-img-wrapper", {duration: .22},  "-=.1")
-  .slideUp("#strat-interest h4", {duration: .22},  "-=.1")
-  .slideIn("#strat-interest .strategy-mobile-logo-wrapper img", {duration: .66},  "-=.33")
-  .slideIn("#strat-interest .strategy-mobile-logo-wrapper p", {duration: .66}, "-=.33")
-  .add("end");
-
-const tl_sectionThree_longevity = gsap.timeline();
-tl_sectionThree_longevity
-  .add("start")
-  .slideIn("#strat-longevity .strategy-card-mobile", {duration: .55}, "+=.33")
-  .slideUp("#strat-longevity .strategy-img-wrapper", {duration: .33},  "-=.1")
-  .slideUp("#strat-longevity h4", {duration: .22},  "-=.1")
-  .slideIn("#strat-longevity .strategy-mobile-logo-wrapper img", {duration: .66},  "-=.33")
-  .slideIn("#strat-longevity .strategy-mobile-logo-wrapper p", {duration: .66}, "-=.33")
-  .add("end");
-
-// End Strat slideShow
-
 // Things Change Animations (Section 01)
 const tl_sectionOne = gsap.timeline({
   scrollTrigger: {
@@ -357,29 +311,6 @@ tl_sectionOne_mobile
     // toggleActions: "play pause reverse restart"
      toggleActions: "play reverse restart reverse"
   });
-// ANIMATE SECTION 04 - PIE CHART //
-
-var tl_pieGraph = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".container-piegraph",
-    start: "top top",
-    end: "+=2000",
-    scrub: 2,
-    snap: {
-      snapTo: "labels",
-      duration: {
-        min: 1,
-        max: 3
-      },
-      delay: 0.6,
-      ease: "power3"
-    },
-    pin: true,
-  }
-});
-
-// END PIE CHART ANIMATION
-// START PIE PIPELINE TIMELINE
 
 const tl_technology_mobile = gsap.timeline();
 tl_technology_mobile
@@ -408,17 +339,17 @@ tl_interestRates
   }, "-=.5")
   .add("end");
 
-  var M2 = TweenMax.to(".character2", 1, {
-
-    timeScale:2,
-    repeat: -1,
-    x: -2000,
-    ease: SteppedEase.config(8)
-  });
-  function timeScale(X) {
-    TweenLite.to([M2], 1, { timeScale: X });
-  }
-  timeScale(2);
+  // var M2 = TweenMax.to(".character2", 1, {
+  //
+  //   timeScale:2,
+  //   repeat: -1,
+  //   x: -2000,
+  //   ease: SteppedEase.config(8)
+  // });
+  // function timeScale(X) {
+  //   TweenLite.to([M2], 1, { timeScale: X });
+  // }
+  // timeScale(2);
 
 var tl_stockMarket =  gsap.timeline();
 tl_stockMarket
@@ -471,15 +402,196 @@ tl_govtSpending
   .add("end");
 
 
+// What Limits Mobile animations
+var tl_sectionTwo_whatLimits = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#whatLimits",
+    start: "top +=25%",
+    toggleActions: "play pause restart reverse",
+  }
+});
+tl_sectionTwo_whatLimits
+  .fade("#whatLimits h1.display-2", { duration: 0.22 }, "+=0.11")
+  .fade("#whatLimits #limits-card-01", { duration: 0.2 })
+  .slideIn("#whatLimits #limits-card-01 .limits-card", { duration: 0.66, y:100})
+  .slideIn("#whatLimits #limits-card-01 .limits-card h3", { duration: 0.22, ease: "back" }, "-=.15")
+  .fade("#whatLimits  #limits-card-01 .limits-card h3 span", { duration: 0.22, ease: "back" }, "-=0.11")
+  .slideIn("#whatLimits  #limits-card-01 .limits-card img", { duration: 0.33, ease: "back" }, "-=.13")
+
+  .fade("#whatLimits #whatlimits-iconbox-desktop", {duration: 0.15})
+  .fade("#whatLimits #whatlimits-iconbox-mobile", {duration: 0.15}, "<")
+  .slideIn("#whatLimits #whatlimits-iconbox-desktop .image-column", { duration: 0.66, stagger:0.15, ease: "back"}, "-=.15")
+  .slideIn("#whatLimits #whatlimits-iconbox-mobile .blocktest", { duration: 0.66, stagger:0.15, ease: "back"}, "<")
+
+  .fade("#whatLimits #limits-card-02", { duration: 0.22 }, "-=.25")
+  .slideIn("#whatLimits #limits-card-02 .limits-card", { duration: 0.66, y:100, ease:"power3.inOut"}, "-=.15")
+  .slideIn("#whatLimits #limits-card-02 .limits-card h3", { duration: 0.22, ease: "back" }, "-=.15")
+  .fade("#whatLimits  #limits-card-02 .limits-card h3 span", { duration: 0.22, ease: "back" }, "-=0.11")
+  .slideIn("#whatLimits  #limits-card-02 .limits-card img", { duration: 0.33, ease: "back" }, "-=.15");
+
+// Strategy Slides Animation (Section 03)
+// Header of section 03
+var tl_sectionThree_header = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#strategy-mobile",
+    start: "top +=25%",
+    // end: "+=45%",
+    toggleActions: "play pause restart reverse",
+  }
+});
+tl_sectionThree_header
+  .from('#strategy-mobile h2.display-2', {
+    opacity: 0
+  });
+
+  // Section 03- MARKET VOLATILITY MOBILE
+const tl_sectionThree_marketVolatility = gsap.timeline();
+tl_sectionThree_marketVolatility
+  .add("start")
+  .slideIn("#strat-market .strategy-card-mobile", {duration: .55}, "+=.33")
+  .slideUp("#strat-market .strategy-img-wrapper", {duration: .22},  "-=.1")
+  .slideUp("#strat-market h4", {duration: .22},  "-=.1")
+  .slideIn("#strat-market .strategy-mobile-logo-wrapper img", {duration: .66},  "-=.33")
+  .slideIn("#strat-market .strategy-mobile-logo-wrapper p", {duration: .66}, "-=.33")
+  .add("end");
+
+  ScrollTrigger.create( {
+    animation: tl_sectionThree_marketVolatility,
+    trigger: "#strategy-mobile",
+    start: "top center",
+    toggleActions: "play pause restart reverse",
+  });
+
+// Section 03- LOW INTEREST RATES
+const tl_sectionThree_lowInterestRates = gsap.timeline();
+tl_sectionThree_lowInterestRates
+  .add("start")
+  .slideIn("#strat-interest .strategy-card-mobile", {duration: .55}, "+=.33")
+  .slideUp("#strat-interest .strategy-img-wrapper", {duration: .22},  "-=.1")
+  .slideUp("#strat-interest h4", {duration: .22},  "-=.1")
+  .slideIn("#strat-interest .strategy-mobile-logo-wrapper img", {duration: .66},  "-=.33")
+  .slideIn("#strat-interest .strategy-mobile-logo-wrapper p", {duration: .66}, "-=.33")
+  .add("end");
+
+const tl_sectionThree_longevity = gsap.timeline();
+tl_sectionThree_longevity
+  .add("start")
+  .slideIn("#strat-longevity .strategy-card-mobile", {duration: .55}, "+=.33")
+  .slideUp("#strat-longevity .strategy-img-wrapper", {duration: .33},  "-=.1")
+  .slideUp("#strat-longevity h4", {duration: .22},  "-=.1")
+  .slideIn("#strat-longevity .strategy-mobile-logo-wrapper img", {duration: .66},  "-=.33")
+  .slideIn("#strat-longevity .strategy-mobile-logo-wrapper p", {duration: .66}, "-=.33")
+  .add("end");
+
+// End Strat slideShow
+
+
+
+
+
+// Section 03 - Our Strategy (desktop)
+  var tl_sectionThree_strategy = gsap.timeline({
+    scrollTrigger: {
+      trigger: "section#strategy",
+      start: "top +=15%",
+      toggleActions: "play pause restart reverse",
+    }
+  });
+  tl_sectionThree_strategy
+  .addLabel("Our Strategy")
+  .slideIn("#strategy h1#strategyHeader", { duration: 0.666 })
+  .slideDown("#strategy #stratcard-01-wrapper .strategy-card", { duration: 1 },  "-=0.44")
+  .from("#strategy #stratcard-01-wrapper .line-down", {
+    duration: .75,
+    scale: 0,
+    yPercent: -100,
+    opacity: 0,
+    ease: "power3.inOut"
+  }, "-=0.44")
+  .slideDown("#strategy #stratcard-01-wrapper .general-card", {duration: 1}, "-=0.66")
+  .slideDown("#strategy #stratcard-01-wrapper .general-card *", {duration: .5, stagger: 0.15}, "-=0.66")
+
+  .slideDown("#strategy #stratcard-02-wrapper .strategy-card", { duration: 0.666},  "-=0.66")
+  .from("#strategy #stratcard-02-wrapper .line-down", {
+    duration: .75,
+    scale: 0,
+    yPercent: -100,
+    opacity: 0,
+    ease: "power3.inOut"
+  }, "-=0.44")
+  .slideDown("#strategy #stratcard-02-wrapper .general-card", { duration: 1}, "-=0.66")
+  .slideDown("#strategy #stratcard-02-wrapper .general-card *", {duration: 0.5, stagger: 0.15}, "-=0.66")
+
+  .slideDown("#strategy #stratcard-03-wrapper .strategy-card", { duration: 0.666 }, "-=0.66" )
+  .from("#strategy #stratcard-03-wrapper .line-down", {
+    duration: .75,
+    scale: 0,
+    yPercent: -100,
+    opacity: 0,
+    ease: "power3.inOut"
+  }, "-=0.44")
+  .slideDown("#strategy #stratcard-03-wrapper .general-card", {duration: 1}, "-=0.66")
+  .slideDown("#strategy #stratcard-03-wrapper .general-card *", {duration: .5, stagger: 0.15}, "-=0.66")
+  .addLabel("End Our Strategy");
+
+  // ANIMATE SECTION 04 - PIE CHART //
+
+  var tl_pieGraph = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".container-piegraph",
+      start: "top top",
+      end: "+=1500",
+      scrub: 2,
+      snap: {
+        snapTo: "labels",
+        duration: {
+          min: 1,
+          max: 3
+        },
+        delay: 0.6,
+        ease: "power3"
+      },
+      pin: true,
+    }
+  });
+
+  tl_pieGraph
+    .addLabel("piegraph--begin")
+    .scaleUpFadeIn("svg#piegraph g", { duration:  1.66, ease: "back", stagger: 0.33 })
+    .addLabel("piegraph--labels")
+    .scaleUpFadeIn("svg#piegraph--label g", { duration:  1.66, ease: "back", stagger: 1 }, "+=3")
+    .addLabel("piegraph--finished")
+    .to({}, { duration: 12})
+    .to("svg#piegraph g", {
+      duration: 1.66,
+      opacity: 0,
+      scale: 0,
+      stagger: 0.3,
+      ease: "back"
+    })
+    .to("svg#piegraph--label g", {
+      duration: 3,
+      opacity: 0,
+      scale: 0,
+      stagger: 0.3,
+      ease: "back"
+    }, "<")
+    .addLabel("piegraph--end");
+
+
+  // END PIEGRAPH TIMELINE
+
+// START SECTION 06 - PIE PIPELINE TIMELINE //
 let direction = 1;
 function getDir(self) {
   direction = self.direction;
 }
-var tl_piePipeline = gsap.timeline({
+
+const tl_piePipes = gsap.timeline({
   scrollTrigger: {
-    trigger: ".container-piepipe",
+        trigger: ".piePipe-outerContainer",
     start: "top top",
-    end: "+=3000",
+    end: "+=1500",
     scrub: 2,
     onUpdate: getDir,
     snap: {
@@ -488,247 +600,89 @@ var tl_piePipeline = gsap.timeline({
         min: 1,
         max: 3
       },
-      delay: 0.6,
-      ease: "power3"
+      delay: 1,
+      ease: "power1"
     },
     pin: true,
   }
 });
 
-tl_piePipeline
-  // first
-  .addLabel("first")
-  .from("#pie-first svg", {
-    duration: 3,
-    x: -700,
-    opacity: 0,
-    scale: 0,
-    ease: "back"
-  }, "-=2")
-  .from("#pie-first svg g.title", {
-    duration: 0.33,
-    x: -25,
-    opacity: 0,
-    scale: 0,
-    ease: "power1.inOut"
-  })
-  .scaleUpFadeIn("#pie-first svg g.text", { duration:  1 })
-  .scaleUpFadeIn("#moneydrop-1", { duration:  2 }, "+=1")
-  // 	second
-  .addLabel("second")
-  .to({}, {
-    duration: 2
-  })
-  .from("#pie-second svg", {
-    duration: 3,
-    x: -700,
-    opacity: 0,
-    scale: 0,
-    ease: "back"
-  })
-  .from("#pie-second svg g.title ", {
-    duration: 0.33,
-    x: -25,
-    opacity: 0,
-    scale: 0,
-    ease: "power1.inOut"
-  })
-  .scaleUpFadeIn("#pie-second svg g.text", { duration:  0.33 })
+tl_piePipes
+.addLabel("start")
+.slideIn("#piePipe-check", {duration:1}, "check")
+.from("#piePipe-lastPipe", {
+  duration:1.33,
+  opacity: 0,
+  yPercent: 80,
+  xPercent: 30,
+  x: -70,
+  scale: 0,
+  ease: "back.inOut"
+}, "-=0.33", "last pipe")
+.addLabel("last pipe")
+.slideIn("#piePipe-first", {},"+=1", "first pipe")
+.dropletIn("#piePipe-droplet01 ", {})
+.addLabel("first pipe")
+.dropletFall("#piePipe-droplet01", {  yPercent: 333 }, "+=1")
+.call(() => { splash_tl.restart(); })
 
-  .to("#moneydrop-1", {
-    duration: 1,
-    y: 150,
-    opacity: 0,
-    scale: 0,
-    ease: "power1.inOut"
-  })
-  .scaleUpFadeIn("#moneydrop-2", { duration: 2 })
+// .call(() => {
+//   if(direction > 0) {
+//   else { splash_tl.reverse(); }
+// })
+.addLabel("first pipe dropped")
+.slideIn("#piePipe-second", {}, "+=1", "second pipe")
+.dropletIn("#piePipe-droplet02 ", {})
+.addLabel("secondpipe")
+.dropletFall("#piePipe-droplet02", {  yPercent: 255 }, "+=1")
+.call(() => { splash_tl.restart(); })
+.addLabel("second pipe dropped")
 
-  // 	Third
-  .addLabel("third")
-  .to({}, { duration: 2 })
+.slideIn("#piePipe-third", {}, "+=1", "third pipe")
+.dropletIn("#piePipe-droplet03 ", {})
+.addLabel("thirdpipe")
+.dropletFall("#piePipe-droplet03", {  yPercent: 175 }, "+=1")
+.call(() => { splash_tl.restart(); })
+.addLabel("third pipe dropped")
 
-  .from("#pie-third svg", {
-    duration: 3,
-    x: -700,
-    opacity: 0,
-    scale: 0,
-    ease: "back"
-  })
-  .from("#pie-third svg g.title ", {
-    duration: 0.33,
-    x: -25,
-    opacity: 0,
-    scale: 0,
-    ease: "power1.inOut"
-  })
-  .scaleUpFadeIn("#pie-third svg g.text", { duration: 0.33 })
-  .to("#moneydrop-2", {
-    duration: 1,
-    y: 150,
-    opacity: 0,
-    scale: 0,
-    ease: "power1.inOut"
-  })
-  .scaleUpFadeIn("#moneydrop-3", { duration: 2 })
-
-
-  // fourth
-  .addLabel("fourth")
-  .to({}, { duration: 2 })
-  .from("#pie-fourth svg", {
-    duration: 3,
-    x: -700,
-    opacity: 0,
-    scale: 0,
-    ease: "back"
-  })
-  .from("#pie-fourth svg g.title ", {
-    duration: 0.33,
-    x: -25,
-    opacity: 0,
-    scale: 0,
-    ease: "power1.inOut"
-  })
-  .scaleUpFadeIn("#pie-fourth svg g.text", { duration:  0.33 })
-  .to("#moneydrop-3", {
-    duration: 1,
-    y: 150,
-    opacity: 0,
-    scale: 0,
-    ease: "power1.inOut"
-  }, "+=1")
-  .scaleUpFadeIn("#moneydrop-4", { duration:  2 })
-
-  // fifth
-  .addLabel("fifth")
-  .to({}, { duration: 2 })
-  .to(".container-piepipe .piepipe-wrapper:not(#pie-fifth)", {yPercent: -30, stagger: 0.125, ease: "back"})
-  // .to("#pie-third", {yPercent: -20, ease: "back"}, "<")
-  // .to("#pie-second", {yPercent: -20, ease: "back"}, "<")
-  // .to("#pie-first", {yPercent: -20, ease: "back"}, "<")
-  .from("#pie-fifth", {
-    duration: 3,
-    yPercent: 50,
-    opacity: 0,
-    ease: "back"
-  }, "+=.22")
-  .to("pie-fifth",{
-    yPercent: -20
-  })
-  .from("#pie-fifth svg g.title", {
-    duration: 0.33,
-    x: -25,
-    opacity: 0,
-    scale: 0,
-    ease: "ease"
-  }, "+=2")
-  .to("#moneydrop-4", {
-    duration: 2,
-    y: 150,
-    opacity: 0,
-    scale: 0,
-    ease: "power1.inOut"
-  }, "+=3")
-  .call(() => {
-  if(direction > 0) {
-    splash_tl.play();
-  } else {
-    splash_tl.reverse();
-  }
-})
-  .add( function(){ M2.play() } , 'label' )
-
-  // final
-  .addLabel("final")
-  .scaleUpFadeIn("#moneydrop-5", { duration:  1 }, "+=1")
-  .to({}, { duration: 2 })
-  .addLabel("endofstory")
-  .to({}, { duration: 2 });
-
-  // var tl_lastDrop = gsap.timeline({
-  //   scrollTrigger: {
-  //     trigger: ".container-piepipe",
-  //     start: "bottom center",
-  //     end: "+=10%",
-  //     scrub: true,
-  //     toggleActions: "play pause reverse resume",
-  //   },
-  // });
-  // tl_lastDrop.to("#moneydrop-5", {
-  //   y: 150,
-  //   opacity: 0,
-  //   scale: 0,
-  //   ease: "power1.inOut"
-  // });
-// END PIE PIPELINE TIMELINE
-
-
-tl_pieGraph
-  .addLabel("piegraph--begin")
-  .scaleUpFadeIn("svg#piegraph g", { duration:  1.66, ease: "back", stagger: 0.33 })
-  .addLabel("piegraph--labels")
-  .scaleUpFadeIn("svg#piegraph--label g", { duration:  1.66, ease: "back", stagger: 1 }, "+=3")
-  .addLabel("piegraph--finished")
-  .to({}, { duration: 12})
-  .to("svg#piegraph g", {
-    duration: 1.66,
-    opacity: 0,
-    scale: 0,
-    stagger: 0.3,
-    ease: "back"
-  })
-  .to("svg#piegraph--label g", {
-    duration: 3,
-    opacity: 0,
-    scale: 0,
-    stagger: 0.3,
-    ease: "back"
-  }, "<")
-  .addLabel("piegraph--end");
-
-
-// END PIEGRAPH TIMELINE
-// END SECTION 04 - PIE CHART //
+.slideIn("#piePipe-fourth", {}, "+=1", "fourth pipe")
+.dropletIn("#piePipe-droplet04 ", {})
+.addLabel("fourthpipe")
+.dropletFall("#piePipe-droplet04", {  yPercent: 100 }, "+=1")
+.call(() => { splash_tl.restart(); })
+.addLabel("fourth pipe dropped")
+.to({}, {duration: 2}, "+=2")
+.addLabel("end");
+// END PIE PIPELINE TIMELINE //
 
 
 
-// FOOTER //
 
-gsap.set('section.footer-container', {
-  yPercent: -50
-});
-
-// const uncover = gsap.timeline({ paused:true })
-gsap.timeline({
+const tl_footer = gsap.timeline({
+    paused: true,
     scrollTrigger: {
       trigger: '.content',
       start: 'bottom bottom',
-      end: '+=66%',
+      end: '+=90%',
       scrub: 2
     }
-  })
-  .to('section.footer-container', {
+  });
+tl_footer
+  .from('footer section.footer-container', {
     duration: 10,
-    yPercent: 0,
-    ease: 'none'
+    yPercent: 100,
+    ease: 'power1'
   }, 0)
-  .from('.footer-content', {
+  .fade('h1#footerdry', {duration: 3}, "+=1")
+  .slideIn('.footer-wrapper-logo', { duration: 3 }, "+=1")
+  .from('section.footer-container .footer-icon-panel', {
     duration: 4,
-    opacity: 0,
-    ease: 'back.inOut'
-  }, "+=2")
-  .from('.footer-card', {
-    duration: 2,
-    opacity: 0,
-    ease: 'back.inOut'
-  }, "=-.25")
-  .from('.footer-icon-outer', {
-    duration: 2,
-    stagger: 0.2,
+    stagger: 2,
     yPercent: 25,
     opacity: 0,
     ease: 'back.inOut'
-  }, "-=.25");
+  }, "-=.25")
+  .fade(".footer-copyright", {duration: 2, stagger: 1}, "-=.22")
+  .addLabel("endfooter");
 
 // END FOOTER //

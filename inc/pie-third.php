@@ -1,4 +1,4 @@
-<svg version="1.1" id="pieThird" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 683.8 180.9" style="enable-background:new 0 0 683.8 180.9;" xml:space="preserve">
+<svg version="1.1" id="pieThird" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 683.8 180.9" style="enable-background:new 0 0 683 180.9;" xml:space="preserve">
 
   <lineargradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="225.3811" y1="140.5497" x2="681.6608" y2="140.5497">
     <stop offset="0" style="stop-color:#4E6C33" />

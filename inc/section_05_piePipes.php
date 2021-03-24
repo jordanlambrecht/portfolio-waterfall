@@ -1,53 +1,44 @@
-<section class="chapter chapter-mobile container-fluid piepipes" data-section-name="Detailed Breakdown" id="piepipes">
-  <div class="container container-piepipe py-5">
-    <div class="row">
-      <div class="col-10 col-sm-10 col-md-9 col-lg-8 col-xl-7 col-xxl-6">
-        <!--  first - growth  -->
-        <div class="piepipe-wrapper position-relative" id="pie-first">
-          <img id="moneydrop-1" class=" moneydrop" src="../assets/img/moneydroplet.svg" alt="droplet of liquid equity"/>
-          <?php include_once('./inc/pie-first.php'); ?>
 
-        </div>
-
-    <!--  second - growth & income  -->
-
-
-        <div class="piepipe-wrapper position-relative" id="pie-second">
-        <img id="moneydrop-2" class=" moneydrop" src="../assets/img/moneydroplet.svg" alt="droplet of liquid equity"/>
-          <?php include_once('./inc/pie-second.php'); ?>
-        </div>
-
-    <!--   third - alternatives -->
-
-
-        <div class="piepipe-wrapper position-relative" id="pie-third">
-        <img id="moneydrop-3" class=" moneydrop" src="../assets/img/moneydroplet.svg" alt="droplet of liquid equity"/>
-          <?php include_once('./inc/pie-third.php'); ?>
-
-        </div>
-
-    <!--   fourth - core bonds -->
-
-
-        <div class="piepipe-wrapper position-relative" id="pie-fourth">
-          <img id="moneydrop-4" class=" moneydrop" src="../assets/img/moneydroplet.svg" alt="droplet of liquid equity"/>
-          <?php include_once('./inc/pie-fourth.php'); ?>
-        </div>
-
-    <!--   fifth - short duration bonds  -->
-
-        <div class="piepipe-wrapper position-relative" id="pie-fifth">
-          <div class="splash-wrapper">
-            <canvas id="hero-lightpass" />
+  <section class="chapter chapter-mobile container-fluid piePipe-outerContainer" data-section-name="Detailed Breakdown" id="piepipes">
+    <div class="container h-100 piePipe-container d-flex flex-column justify-content-center">
+      <div class="piePipe-wrapper " id="piePipe-first">
+        <div class="piePipe-wrapper-droplet" id="piePipe-droplet01">
+          <div class="piePipe-droplet-wrapper-inner">
+            <img src="https://portfoliowaterfall.pbds.dev/assets/img/testsplash.svg" class="piePipe" alt="First Pipe"/>
           </div>
-
-          <!-- <img id="moneydrop-5" class=" moneydrop" src="../assets/img/moneydroplet.svg" alt="droplet of liquid equity"/> -->
-          <?php include_once('./inc/pie-fifth.php'); ?>
         </div>
-     </div>
-
-
+        <img src="https://portfoliowaterfall.pbds.dev/assets/img/pieFirst.svg" class="piePipe" alt="First Pipe"/>
+      </div>
+      <div class="piePipe-wrapper" id="piePipe-second">
+        <div class="piePipe-wrapper-droplet" id="piePipe-droplet02">
+          <div class="piePipe-droplet-wrapper-inner">
+            <img src="https://portfoliowaterfall.pbds.dev/assets/img/testsplash.svg" class="piePipe" alt="First Pipe"/>
+          </div>
+        </div>
+        <img src="https://portfoliowaterfall.pbds.dev/assets/img/pieSecond.svg" class="piePipe" alt="Second Pipe"/>
+      </div>
+      <div class="piePipe-wrapper" id="piePipe-third">
+        <div class="piePipe-wrapper-droplet" id="piePipe-droplet03">
+          <div class="piePipe-droplet-wrapper-inner">
+            <img src="https://portfoliowaterfall.pbds.dev/assets/img/testsplash.svg" class="piePipe" alt="First Pipe"/>
+          </div>
+        </div>
+        <img src="https://portfoliowaterfall.pbds.dev/assets/img/pieThird.svg" class="piePipe" alt="Third Pipe"/>
+      </div>
+      <div class="piePipe-wrapper" id="piePipe-fourth">
+        <div class="piePipe-wrapper-droplet" id="piePipe-droplet04">
+          <div class="piePipe-droplet-wrapper-inner">
+            <img src="https://portfoliowaterfall.pbds.dev/assets/img/testsplash.svg" class="piePipe" alt="First Pipe"/>
+          </div>
+        </div>
+        <img src="https://portfoliowaterfall.pbds.dev/assets/img/pieFourth.svg" class="piePipe" alt="Fourth Pipe"/>
+      </div>
+      <div class="piePipe-wrapper piePipe-lastPipe d-flex justify" id="piePipe-lastPipe">
+        <canvas id="hero-lightpass" class="piePipe" />
+  <!--       <img src="https://portfoliowaterfall.pbds.dev/assets/img/splashFrames/PW_v06_splash_01.svg" alt="Last Pipe"/> -->
+      </div>
+      <div class="piePipe-wrapper piePipe-check" id="piePipe-check">
+        <img src="https://portfoliowaterfall.pbds.dev/assets/img/PF_RetirementCheck_v01.svg" class="piePipe" alt="Retirement Check"/>
+      </div>
     </div>
-
-  </div>
-</section>
+  </section>
