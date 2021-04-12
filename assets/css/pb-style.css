@@ -235,6 +235,16 @@ h1.display-2 {
   font-family: "futura-pt", sans-serif;
 }
 
+@media (min-width: 1800px) {
+  .w-xxl-50 {
+    width: 50%;
+  }
+
+  .mw-xxl-100 {
+    max-width: 100%;
+  }
+}
+
 /* NOTE: HEADER */
 header {
   position: sticky;
@@ -274,14 +284,21 @@ section.header-container {
 }
 
 #landing-tagline {
-  font-weight: 600;
+  font-weight: 500;
   margin-top: 2em;
   margin-right: -2.555em;
 }
 
+#footer-tagline {
+  font-weight: 500;
+  margin-top: 2em;
+  margin-right: -2.333em;
+}
+
 @media (max-width: 768px) {
-  #landing-tagline {
-    margin-right: 0;
+  #landing-tagline,
+  #footer-tagline {
+    margin-right: -1.333em;
     margin-top: 1.5em;
     font-weight: 500;
   }
@@ -365,7 +382,7 @@ section.piePipe-outerContainer {
   background-color: var(--color--black);
 }
 
-.container-piegraph {
+/* .container-piegraph {
   height: 100vh;
   position: relative;
   padding-right: 2em;
@@ -373,11 +390,21 @@ section.piePipe-outerContainer {
   padding-top: 5em;
   padding-bottom: 5em;
   overflow: visible;
+} */
+.bg-salmon {
+  background: salmon;
+}
+
+.pieGraph-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 svg#piegraph {
   overflow: visible;
-  width: 80%;
   z-index: 40;
   max-width: 437.87px;
 }
@@ -625,13 +652,10 @@ section.footer-container {
   object-fit: contain;
 }
 
-.wrapper-logo {
+.wrapper-logo,
+.footer-wrapper-logo {
   width: 100%;
   max-width: 712px;
-}
-
-#footer-logo {
-  opacity: 96%;
 }
 
 .footer-wrapper-logo {
@@ -665,9 +689,9 @@ section.footer-container {
 }
 
 @media (min-width: 1400px) {
-  .footer-wrapper-logo {
+  /* .footer-wrapper-logo {
     max-width: 45vw;
-  }
+  } */
 
   .footer-icon-panel {
     max-width: 1024px;
@@ -679,6 +703,7 @@ section.footer-container {
 
   h2#footer-tagline {
     font-size: 2.33em;
+    margin-right: -2.555em;
   }
 }
 
@@ -885,6 +910,18 @@ ul.showslides-mobile li svg {
   width: 20%;
 }
 
+@media (min-width: 1800px) {
+  ul.whatlimits-middle li svg,
+  ul.showslides li svg,
+  ul.showslides-mobile li svg {
+    height: 100%;
+    min-height: 75px;
+    max-height: 175px;
+    width: 25%;
+    margin-right: 30px;
+  }
+}
+
 ul.whatlimits-middle li {
   list-style: none;
 }
@@ -911,6 +948,44 @@ ul.showslides-mobile li h2 {
 @media (min-width: 1281px) {
   ul.showslides li h2 {
     font-size: 2em;
+  }
+}
+
+@media (min-width: 1800px) {
+  ul.showslides li h2 {
+    font-size: 2.33em;
+    padding-right: 15px;
+  }
+
+  .my-xxxl-3 {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+
+  .mw-xxxl-100 {
+    max-width: 100%;
+  }
+
+  .py-xxxl-5 {
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+
+  .px-xxxl-3 {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
+  .flex-xxxl-row {
+    flex-direction: row;
+  }
+
+  .d-xxxl-flex {
+    display: flex;
+  }
+
+  .flex-xxxl-wrap {
+    flex-wrap: wrap;
   }
 }
 

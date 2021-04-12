@@ -1,5 +1,15 @@
 
   <section class="chapter chapter-mobile container-fluid piePipe-outerContainer" data-section-name="Detailed Breakdown" id="piepipes">
+    <div class="container-fluid pieGraph-container h-100 w-100 d-flex flex-column justify-content-center position-absolute">
+        <div class=" position-relative d-flex align-content-center justify-content-center" id="">
+          <!-- STARTPiechart SVG	  -->
+          <?php include_once('./inc/piechart.php'); ?>
+          <!-- 		END     Piechart SVG	-->
+          <!-- 		START   Labels SVG	 	-->
+        <?php include_once('./inc/piechart-labels.php'); ?>
+          <!-- 		END     Labels SVG	-->
+        </div>
+    </div>
     <div class="container h-100 piePipe-container d-flex flex-column justify-content-center">
       <div class="piePipe-wrapper " id="piePipe-first">
         <div class="piePipe-wrapper-droplet" id="piePipe-droplet01">

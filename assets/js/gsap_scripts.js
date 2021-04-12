@@ -535,48 +535,37 @@ tl_sectionThree_longevity
   .addLabel("End Our Strategy");
 
   // ANIMATE SECTION 04 - PIE CHART //
+  function goToSection(section, anim) {
+    gsap.to(window, {
+      scrollTo: {y: section, autoKill: false},
+      duration: 1
+    });
 
-  var tl_pieGraph = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".container-piegraph",
-      start: "top top",
-      end: "+=1500",
-      scrub: 2,
-      snap: {
-        snapTo: "labels",
-        duration: {
-          min: 1,
-          max: 3
-        },
-        delay: 0.6,
-        ease: "power3"
-      },
-      pin: true,
+    if(anim) {
+      anim.restart();
     }
+  }
+  var tl_pieGraph = gsap.timeline({
+    // scrollTrigger: {
+    //   trigger: ".container-piegraph",
+    //   start: "top top",
+    //   end: "+=1500",
+    //   scrub: 2,
+    //   snap: {
+    //     snapTo: "labels",
+    //     duration: {
+    //       min: 1,
+    //       max: 2
+    //     },
+    //     delay: 0.4,
+    //     ease: "power3"
+    //   },
+    //   pin: true,
+    // }
   });
 
   tl_pieGraph
-    .addLabel("piegraph--begin")
-    .scaleUpFadeIn("svg#piegraph g", { duration:  1.66, ease: "back", stagger: 0.33 })
-    .addLabel("piegraph--labels")
-    .scaleUpFadeIn("svg#piegraph--label g", { duration:  1.66, ease: "back", stagger: 1 }, "+=3")
-    .addLabel("piegraph--finished")
-    .to({}, { duration: 12})
-    .to("svg#piegraph g", {
-      duration: 1.66,
-      opacity: 0,
-      scale: 0,
-      stagger: 0.3,
-      ease: "back"
-    })
-    .to("svg#piegraph--label g", {
-      duration: 3,
-      opacity: 0,
-      scale: 0,
-      stagger: 0.3,
-      ease: "back"
-    }, "<")
-    .addLabel("piegraph--end");
+
 
 
   // END PIEGRAPH TIMELINE
@@ -591,25 +580,46 @@ const tl_piePipes = gsap.timeline({
   scrollTrigger: {
         trigger: ".piePipe-outerContainer",
     start: "top top",
-    end: "+=1500",
+    end: "+=3600",
     scrub: 2,
     onUpdate: getDir,
     snap: {
       snapTo: "labels",
       duration: {
         min: 1,
-        max: 3
+        max: 2,
       },
       delay: 1,
       ease: "power1"
     },
     pin: true,
+    anticipatePin: true,
   }
 });
 
 tl_piePipes
-.addLabel("start")
-.slideIn("#piePipe-check", {duration:1}, "check")
+.addLabel("piegraph--begin")
+.scaleUpFadeIn("svg#piegraph g", { duration:  1.66, ease: "back", stagger: 0.33 })
+.addLabel("piegraph--labels")
+.scaleUpFadeIn("svg#piegraph--label g", { duration:  1.66, ease: "back", stagger: 1 }, "+=3")
+.addLabel("piegraph--finished")
+.to({}, { duration: 12})
+.to("svg#piegraph g", {
+  duration: 1.66,
+  opacity: 0,
+  scale: 0,
+  stagger: 0.3,
+  ease: "back"
+})
+.to("svg#piegraph--label g", {
+  duration: 3,
+  opacity: 0,
+  scale: 0,
+  stagger: 0.3,
+  ease: "back"
+}, "<")
+.slideIn("#piePipe-check", {duration:0.33}, "-=1", "check")
+.addLabel("piepipes--start")
 .from("#piePipe-lastPipe", {
   duration:1.33,
   opacity: 0,

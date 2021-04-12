@@ -1,4 +1,4 @@
-<div class="container p-3 h-100">
+<div class="container p-3 h-100 px-xxl-5">
   <div class="row h-100 p-2">
     <div class="col-12 h-100 d-flex flex-column justify-content-between color--white my-3 px-4 p-2">
       <h3 class="display-3 display-slideShow mb-2 pb-2 text-center text-sm-left">HISTORICAL <br>S&P 500 Index<small>*</small></h3>

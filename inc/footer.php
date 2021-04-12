@@ -10,12 +10,10 @@
           <h1 class="text-uppercase color--white display-2 fw-b text-center" id="footerdry">Don't Let Your Portfolio Dry Up.</h1>
         </div>
 
-        <div class="  d-flex justify-content-center flex-column align-items-center flex-fill">
-          <div class="footer-wrapper-logo">
-            <a href="/">
-              <img id="footer-logo" class="img-fluid bg--white p-4 rounded-2" src="../assets/img/PW_PrimaryLogo_Dark_v01.svg" />
-            </a>
-            <h2 id="footer-tagline" class="color--white text-uppercase fw-normal fst-italic mt-3 text-center">A Replenishing Income Strategy</h2>
+        <div class="  d-flex justify-content-center flex-column align-items-center flex-fill row">
+          <div class="col-12 p-5 p-md-2 footer-wrapper-logo d-flex flex-column justify-content-center align-items-center">
+            <img id="footer-logo" class="img-fluid" src="../assets/img/PortfolioWaterfall_PrimaryLogo_v01@2x.png" />
+            <h2 id="footer-tagline" class="color--white text-uppercase fst-italic mt-4 text-center">A Replenishing<br>  Income Strategy</h2>
           </div>
         </div>
 

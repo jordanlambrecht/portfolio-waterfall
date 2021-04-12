@@ -7,7 +7,7 @@
       <div class="row d-flex flex-row justify-content-center">
         <div class="col-12 p-5 p-md-2 wrapper-logo d-flex flex-column justify-content-center align-items-center">
           <img id="landing-logo" class="img-fluid" src="../assets/img/PortfolioWaterfall_PrimaryLogo_v01@2x.png" />
-          <h2 id="landing-tagline" class="color--white text-uppercase fst-italic mt-4">A Replenishing Income Strategy</h2>
+          <h2 id="landing-tagline" class="color--white text-uppercase fst-italic mt-4">A Replenishing <br class="d-sm-none">  Income Strategy</h2>
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@
 		<div class="row h-100">
 		<div class="col-12 h-100">
 
-			<div class="h-100 position-relative" id="">
+			<div class="h-100 position-relative w-100 h-100 d-flex align-content-center justify-content-center" id="">
 				<!-- STARTPiechart SVG	  -->
 				<?php include_once('./inc/piechart.php'); ?>
 				<!-- 		END     Piechart SVG	-->
