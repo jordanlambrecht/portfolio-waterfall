@@ -97,7 +97,7 @@
 <script src="./assets/js/showSlides.js"></script>
 <script src="./assets/js/gsap_scripts.js"></script>
 <script src="./assets/js/backtotop.js"></script>
-<script src="./assets/js/panelsnap.js"></script>
+<!-- <script src="./assets/js/panelsnap.js"></script> -->
 <script src="./assets/js/general_scripts.js"></script>
 
 <!-- <script type="text/javascript" src="fullpage.js"></script> -->
