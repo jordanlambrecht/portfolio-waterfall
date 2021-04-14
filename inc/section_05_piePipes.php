@@ -3,10 +3,10 @@
     <div class="container-fluid pieGraph-container h-100 w-100 d-flex flex-column justify-content-center position-absolute">
         <div class=" position-relative d-flex align-content-center justify-content-center" id="">
           <!-- STARTPiechart SVG	  -->
-          <?php include_once('./inc/piechart.php'); ?>
+          <?php include_once('./partials/04_piechart.php'); ?>
           <!-- 		END     Piechart SVG	-->
           <!-- 		START   Labels SVG	 	-->
-        <?php include_once('./inc/piechart-labels.php'); ?>
+        <?php include_once('./partials/04_piechart-labels.php'); ?>
           <!-- 		END     Labels SVG	-->
         </div>
     </div>
@@ -45,7 +45,6 @@
       </div>
       <div class="piePipe-wrapper piePipe-lastPipe d-flex justify" id="piePipe-lastPipe">
         <canvas id="hero-lightpass" class="piePipe" />
-  <!--       <img src="https://portfoliowaterfall.pbds.dev/assets/img/splashFrames/PW_v06_splash_01.svg" alt="Last Pipe"/> -->
       </div>
       <div class="piePipe-wrapper piePipe-check" id="piePipe-check">
         <img src="https://portfoliowaterfall.pbds.dev/assets/img/PF_RetirementCheck_v01.svg" class="piePipe" alt="Retirement Check"/>
