@@ -1,18 +1,8 @@
 /*jshint esversion: 6 */
 
-
-
 // INITIALIZATION //
 gsap.registerPlugin(ScrollTrigger);
 // END INITIALIZATION //
-
-
-
-
-
-
-
-
 
 // REGISTER EFFECTS
 const gsapEffects = [
@@ -203,16 +193,6 @@ header_tl_onload
     ease: 'power3.inOut'
   }, "-=.5")
   .add("end");
-  // .set('#landing-tagline', {
-  //   opacity: 0,
-  //   yPercent: -25
-  // })
-  // .set('.scroll-down', {
-  //   opacity: 0,
-  //   yPercent: 25
-  // })
-
-
 
 let tl_header = gsap.timeline({
 
@@ -267,7 +247,6 @@ tl_header
     opacity: 0,
     ease: 'power3.inOut'
   }, "-=9");
-// tl_header.reverse("withoutScroll");
 // END HEADER //
 
 // Things Change Animations (Section 01)
@@ -338,18 +317,6 @@ tl_interestRates
     ease: "back"
   }, "-=.5")
   .add("end");
-
-  // var M2 = TweenMax.to(".character2", 1, {
-  //
-  //   timeScale:2,
-  //   repeat: -1,
-  //   x: -2000,
-  //   ease: SteppedEase.config(8)
-  // });
-  // function timeScale(X) {
-  //   TweenLite.to([M2], 1, { timeScale: X });
-  // }
-  // timeScale(2);
 
 var tl_stockMarket =  gsap.timeline();
 tl_stockMarket
@@ -485,10 +452,6 @@ tl_sectionThree_longevity
 
 // End Strat slideShow
 
-
-
-
-
 // Section 03 - Our Strategy (desktop)
   var tl_sectionThree_strategy = gsap.timeline({
     scrollTrigger: {
@@ -545,32 +508,9 @@ tl_sectionThree_longevity
       anim.restart();
     }
   }
-  var tl_pieGraph = gsap.timeline({
-    // scrollTrigger: {
-    //   trigger: ".container-piegraph",
-    //   start: "top top",
-    //   end: "+=1500",
-    //   scrub: 2,
-    //   snap: {
-    //     snapTo: "labels",
-    //     duration: {
-    //       min: 1,
-    //       max: 2
-    //     },
-    //     delay: 0.4,
-    //     ease: "power3"
-    //   },
-    //   pin: true,
-    // }
-  });
-
-  tl_pieGraph
 
 
-
-  // END PIEGRAPH TIMELINE
-
-// START SECTION 06 - PIE PIPELINE TIMELINE //
+// START SECTION 06 - PIE GRAPH AND PIE PIPELINE TIMELINE //
 let direction = 1;
 function getDir(self) {
   direction = self.direction;
@@ -635,11 +575,6 @@ tl_piePipes
 .addLabel("first pipe")
 .dropletFall("#piePipe-droplet01", {  yPercent: 333 }, "+=1")
 .call(() => { splash_tl.restart(); })
-
-// .call(() => {
-//   if(direction > 0) {
-//   else { splash_tl.reverse(); }
-// })
 .addLabel("first pipe dropped")
 .slideIn("#piePipe-second", {}, "+=1", "second pipe")
 .dropletIn("#piePipe-droplet02 ", {})
@@ -647,14 +582,12 @@ tl_piePipes
 .dropletFall("#piePipe-droplet02", {  yPercent: 255 }, "+=1")
 .call(() => { splash_tl.restart(); })
 .addLabel("second pipe dropped")
-
 .slideIn("#piePipe-third", {}, "+=1", "third pipe")
 .dropletIn("#piePipe-droplet03 ", {})
 .addLabel("thirdpipe")
 .dropletFall("#piePipe-droplet03", {  yPercent: 175 }, "+=1")
 .call(() => { splash_tl.restart(); })
 .addLabel("third pipe dropped")
-
 .slideIn("#piePipe-fourth", {}, "+=1", "fourth pipe")
 .dropletIn("#piePipe-droplet04 ", {})
 .addLabel("fourthpipe")
@@ -665,9 +598,7 @@ tl_piePipes
 .addLabel("end");
 // END PIE PIPELINE TIMELINE //
 
-
-
-
+// FOOTER ANIMATION
 const tl_footer = gsap.timeline({
     paused: true,
     scrollTrigger: {

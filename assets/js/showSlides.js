@@ -1,4 +1,4 @@
-/*jshint esversion: 6 */
+// This JS file controls the Things Change section and what happens when a viewer clicks on certain things.
 var technology          = document.getElementById( "technology" ),
       technologyBox     = document.getElementById( "technology-box" ),
       interestRates     = document.getElementById( "interestrates" ),
@@ -27,7 +27,6 @@ $(govtSpending).click(function() {
     var color = $( this ).css( "color" );
       changeBgColor(color);
     $(govtSpendingBox).addClass("showBox");
-    // $(govtSpendingBox).show();
     turnOff(govtSpending);
     tl_govtSpending.play();
   }
@@ -53,28 +52,11 @@ $(stockMarket).click(function() {
   }
 });
 function changeBgColor(color){
-  // console.log(color);
   gsap.to('.showslides--right', {
     backgroundColor: color,
     duration: 0.66,
     ease: "none"
   });
-//   var animateBackground = anime({
-//     targets: '.showslides--right',
-//     backgroundColor: color,
-//     duration: 4000,
-//     autoplay: true
-// });
-}
-// TO-DO:
-// function animateIn(navItem){
-//   var animateBackground = anime({
-//     targets: '.animateIn',
-//     backgroundColor: color,
-//     duration: 4000,
-//     autoplay: true
-// });
-// }
 function turnOff(navItem){
   if(navItem != technology){
    $(technology).removeClass("selected");
@@ -102,7 +84,6 @@ function turnOff(navItem){
   }
 }
 function slideAway(hideaway){
-  // var getOutaHere = document.querySelectorAll('.box:not(.showBox)');
   let tl_slideAway = gsap.timeline();
 
   tl_slideAway.to(hideaway, {
@@ -114,20 +95,6 @@ function slideAway(hideaway){
     duration: 0,
     display: 'none'
   });
-  // $(hideaway).hide();
-  // var hide = anime({
-  //     targets: document.querySelectorAll('.box:not(.showBox)'),
-  //     opacity: 0,
-  //     direction: 'normal',
-  //     duration: 600,
-  //     loop: false,
-  //     autoplay: true,
-  //     easing: 'easeInOutSine',
-  //     complete: function(anim) {
-  //       $(hideaway).hide();
-  //
-  //     }
-  //   });
     slideIn();
 }
 function slideIn(){
@@ -141,16 +108,4 @@ function slideIn(){
     duration: 0.66,
     ease: "sine.inOut"
   });
-
-  // $(showIt).css("opacity", "0");
-  // $(showIt).show();
-  //  var show = anime({
-  //     targets: '.showBox',
-  //     opacity: [0,1],
-  //     direction: 'normal',
-  //     duration: 600,
-  //     loop: false,
-  //     autoplay: true,
-  //     easing: 'easeInOutSine',
-  //   });
 }

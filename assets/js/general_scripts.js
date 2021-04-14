@@ -1,68 +1,5 @@
 console.log("Website developed with love by Pixel Bakery Design Studio in Lincoln, NE. https://pixelbakery.com");
 
-
-
-// For Debugging & Diagnostics
-// Start of Screen Size Debugging Tool
-// const screenObject = document.querySelector(".screeninfo");
-// function reportWindowSize() {
-//   let h = window.innerHeight;
-//   let w = window.innerWidth;
-//   let screenSize = "XS Screen (<575.98)";
-//   switch (true){
-//       case (w >= 1400):  screenSize = "XXL Screen (1400)";   break;
-//       case (w >= 1200):  screenSize = "XL Screen (1200px)";  break;
-//       case (w >= 992):   screenSize = "LG Screen (992px)";   break;
-//       case (w >= 768):   screenSize = "MD Screen (768px)";   break;
-//       case (w >= 576):   screenSize = "SM Screen (576px)";   break;
-//       default:          screenSize = "XS Screen (<575.98)"; break;
-//   }
-//   screenObject.innerHTML = w + " x " + h + " | " + screenSize;
-// }
-// window.onresize = reportWindowSize();
-// window.onload = reportWindowSize();
-// window.addEventListener('resize', reportWindowSize);
-// End of Screen Size Debugging Tool
-// END DEBUGGING //
-
-
-// SIDE NAV
-//
-// const sections =  document.querySelectorAll('section.chapter ');
-// const sectionsMenu = document.getElementById("sectionMenu");
-// const sectionMenuUL = document.createElement("ul");
-// sectionMenuUL.classList.add("nav");
-// sectionMenuUL.classList.add("flex-column");
-//
-// function iterate(section, index) {
-//    let listItem = document.createElement("LI");
-//    listItem.classList.add("nav-item");
-//    listItem.id = "scrollTo--" + index;
-//
-//    let listLink = document.createElement("A");
-//    listLink.href = "#" + section.id;
-//    listLink.classList.add("nav-link");
-//
-//    let listCircle = document.createElement("Span");
-//     listCircle.classList.add("sectionMenu--circle");
-//    listLink.appendChild(listCircle);
-//
-//
-//    let listContent = document.createTextNode(section.dataset.sectionName);
-//    listLink.appendChild(listContent);
-//    console.log(section.dataset.sectionName);
-//    listItem.appendChild(listLink);
-//    sectionMenuUL.appendChild(listItem);
-//   console.log("#" + section.id + " | " + section.dataset.sectionName + ' has index ' + index );
-// }
-// sections.forEach((iterate));
-// sectionMenu.appendChild(sectionMenuUL);
-
-
-// END SIDE NAV
-
-
-
 // individual slide animations
 var thingsChangeSlides = function thingsChangeSlides(i) {
   switch(i) {
@@ -147,15 +84,3 @@ var strategyClick = function strategyClick(flkty) {
   });
 };
 strategyFlickity();
-//
-// document.addEventListener("DOMContentLoaded", function() {
-//           var defaultOptions = {
-//             container: document.getElementsByTagName("MAIN")[0],
-//             panelSelector: 'main section',
-//             directionThreshold: 50,
-//             delay: 0,
-//             duration: 300,
-//             easing: function(t) { return t },
-//           };
-//           new PanelSnap();
-//         });
