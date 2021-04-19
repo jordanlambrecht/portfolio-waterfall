@@ -1,4 +1,5 @@
-// This JS file controls the Things Change section and what happens when a viewer clicks on certain things.
+
+/*jshint esversion: 6 */
 var technology          = document.getElementById( "technology" ),
       technologyBox     = document.getElementById( "technology-box" ),
       interestRates     = document.getElementById( "interestrates" ),
@@ -27,6 +28,7 @@ $(govtSpending).click(function() {
     var color = $( this ).css( "color" );
       changeBgColor(color);
     $(govtSpendingBox).addClass("showBox");
+    // $(govtSpendingBox).show();
     turnOff(govtSpending);
     tl_govtSpending.play();
   }
@@ -57,6 +59,7 @@ function changeBgColor(color){
     duration: 0.66,
     ease: "none"
   });
+}
 function turnOff(navItem){
   if(navItem != technology){
    $(technology).removeClass("selected");

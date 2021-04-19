@@ -4,23 +4,18 @@ console.log("Website developed with love by Pixel Bakery Design Studio in Lincol
 var thingsChangeSlides = function thingsChangeSlides(i) {
   switch(i) {
     case 1:
-      console.log("slide " + i);
       tl_sectionOne_mobile.tweenFromTo("here", "end");
     break;
     case 2:
-      console.log("slide " + i);
       tl_technology_mobile.tweenFromTo("here", "end");
     break;
     case 3:
-      console.log("slide " + i);
       tl_interestRates.tweenFromTo("here", "end");
     break;
     case 4:
-      console.log("slide " + i);
       tl_stockMarket.tweenFromTo("here", "end");
     break;
     case 5:
-      console.log("slide " + i);
       tl_govtSpending.tweenFromTo("here", "end");
     break;
     }
@@ -30,20 +25,16 @@ var thingsChangeSlides = function thingsChangeSlides(i) {
   var strategySlides = function strategySlides(i) {
     switch(i) {
       case 1:
-        console.log("slide " + i);
         tl_sectionThree_marketVolatility.tweenFromTo("start", "end");
       break;
       case 2:
-        console.log("slide " + i);
         tl_sectionThree_lowInterestRates.tweenFromTo("start", "end");
       break;
       case 3:
-        console.log("slide " + i);
         tl_sectionThree_longevity.tweenFromTo("start", "end");
       break;
       }
     };
-
 
 // section_01_thingsChange_mobile Flickity
 var thingsChangeFlickity = function thingsChangeFlickity() {
@@ -75,7 +66,6 @@ var strategyFlickity = function strategyFlickity() {
   });
   strategyClick(flkty);
 };
-
 
 var strategyClick = function strategyClick(flkty) {
   flkty.on( 'select', function( index ) {

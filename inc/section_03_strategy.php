@@ -3,7 +3,7 @@
 <div class="m-0 h-100 d-flex flex-column">
   <div class="bg--light-blue m-0 row pb-3 w-100">
     <div class="col-12 mt-1 mb-1 col-12 text-center d-flex justify-content-center">
-      <h1 class="display-2 color--white text-center mw-100">WHAT LIMITS WITHDRAWAL RATES?</h1>
+      <h1 class="display-2 color--white text-center mw-100" id="strategyHeader">WHAT LIMITS WITHDRAWAL RATES?</h1>
     </div>
   </div>
   <div class=" py-0 row d-md-flex justify-content-md-between flex-fill my-0">

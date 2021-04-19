@@ -283,13 +283,12 @@ tl_sectionOne_mobile
   })
   .add("end");
 
-  ScrollTrigger.create( {
-    animation: tl_sectionOne_mobile,
-    trigger: "#thingschangemobile",
-    start: "top center",
-    // toggleActions: "play pause reverse restart"
-     toggleActions: "play reverse restart reverse"
-  });
+ScrollTrigger.create( {
+  animation: tl_sectionOne_mobile,
+  trigger: "#thingschangemobile",
+  start: "top center",
+ toggleActions: "play reverse restart reverse"
+});
 
 const tl_technology_mobile = gsap.timeline();
 tl_technology_mobile
@@ -384,12 +383,10 @@ tl_sectionTwo_whatLimits
   .slideIn("#whatLimits #limits-card-01 .limits-card h3", { duration: 0.22, ease: "back" }, "-=.15")
   .fade("#whatLimits  #limits-card-01 .limits-card h3 span", { duration: 0.22, ease: "back" }, "-=0.11")
   .slideIn("#whatLimits  #limits-card-01 .limits-card img", { duration: 0.33, ease: "back" }, "-=.13")
-
   .fade("#whatLimits #whatlimits-iconbox-desktop", {duration: 0.15})
   .fade("#whatLimits #whatlimits-iconbox-mobile", {duration: 0.15}, "<")
   .slideIn("#whatLimits #whatlimits-iconbox-desktop .image-column", { duration: 0.66, stagger:0.15, ease: "back"}, "-=.15")
   .slideIn("#whatLimits #whatlimits-iconbox-mobile .blocktest", { duration: 0.66, stagger:0.15, ease: "back"}, "<")
-
   .fade("#whatLimits #limits-card-02", { duration: 0.22 }, "-=.25")
   .slideIn("#whatLimits #limits-card-02 .limits-card", { duration: 0.66, y:100, ease:"power3.inOut"}, "-=.15")
   .slideIn("#whatLimits #limits-card-02 .limits-card h3", { duration: 0.22, ease: "back" }, "-=.15")
@@ -402,7 +399,6 @@ var tl_sectionThree_header = gsap.timeline({
   scrollTrigger: {
     trigger: "#strategy-mobile",
     start: "top +=25%",
-    // end: "+=45%",
     toggleActions: "play pause restart reverse",
   }
 });
@@ -484,7 +480,6 @@ tl_sectionThree_longevity
   }, "-=0.44")
   .slideDown("#strategy #stratcard-02-wrapper .general-card", { duration: 1}, "-=0.66")
   .slideDown("#strategy #stratcard-02-wrapper .general-card *", {duration: 0.5, stagger: 0.15}, "-=0.66")
-
   .slideDown("#strategy #stratcard-03-wrapper .strategy-card", { duration: 0.666 }, "-=0.66" )
   .from("#strategy #stratcard-03-wrapper .line-down", {
     duration: .75,
@@ -518,7 +513,7 @@ function getDir(self) {
 
 const tl_piePipes = gsap.timeline({
   scrollTrigger: {
-        trigger: ".piePipe-outerContainer",
+    trigger: ".piePipe-outerContainer",
     start: "top top",
     end: "+=3600",
     scrub: 2,
@@ -538,65 +533,65 @@ const tl_piePipes = gsap.timeline({
 });
 
 tl_piePipes
-.addLabel("piegraph--begin")
-.scaleUpFadeIn("svg#piegraph g", { duration:  1.66, ease: "back", stagger: 0.33 })
-.addLabel("piegraph--labels")
-.scaleUpFadeIn("svg#piegraph--label g", { duration:  1.66, ease: "back", stagger: 1 }, "+=3")
-.addLabel("piegraph--finished")
-.to({}, { duration: 12})
-.to("svg#piegraph g", {
-  duration: 1.66,
-  opacity: 0,
-  scale: 0,
-  stagger: 0.3,
-  ease: "back"
-})
-.to("svg#piegraph--label g", {
-  duration: 3,
-  opacity: 0,
-  scale: 0,
-  stagger: 0.3,
-  ease: "back"
-}, "<")
-.slideIn("#piePipe-check", {duration:0.33}, "-=1", "check")
-.addLabel("piepipes--start")
-.from("#piePipe-lastPipe", {
-  duration:1.33,
-  opacity: 0,
-  yPercent: 80,
-  xPercent: 30,
-  x: -70,
-  scale: 0,
-  ease: "back.inOut"
-}, "-=0.33", "last pipe")
-.addLabel("last pipe")
-.slideIn("#piePipe-first", {},"+=1", "first pipe")
-.dropletIn("#piePipe-droplet01 ", {})
-.addLabel("first pipe")
-.dropletFall("#piePipe-droplet01", {  yPercent: 333 }, "+=1")
-.call(() => { splash_tl.restart(); })
-.addLabel("first pipe dropped")
-.slideIn("#piePipe-second", {}, "+=1", "second pipe")
-.dropletIn("#piePipe-droplet02 ", {})
-.addLabel("secondpipe")
-.dropletFall("#piePipe-droplet02", {  yPercent: 255 }, "+=1")
-.call(() => { splash_tl.restart(); })
-.addLabel("second pipe dropped")
-.slideIn("#piePipe-third", {}, "+=1", "third pipe")
-.dropletIn("#piePipe-droplet03 ", {})
-.addLabel("thirdpipe")
-.dropletFall("#piePipe-droplet03", {  yPercent: 175 }, "+=1")
-.call(() => { splash_tl.restart(); })
-.addLabel("third pipe dropped")
-.slideIn("#piePipe-fourth", {}, "+=1", "fourth pipe")
-.dropletIn("#piePipe-droplet04 ", {})
-.addLabel("fourthpipe")
-.dropletFall("#piePipe-droplet04", {  yPercent: 100 }, "+=1")
-.call(() => { splash_tl.restart(); })
-.addLabel("fourth pipe dropped")
-.to({}, {duration: 2}, "+=2")
-.addLabel("end");
-// END PIE PIPELINE TIMELINE //
+  .addLabel("piegraph--begin")
+  .scaleUpFadeIn("svg#piegraph g", { duration:  1.66, ease: "back", stagger: 0.33 })
+  .addLabel("piegraph--labels")
+  .scaleUpFadeIn("svg#piegraph--label g", { duration:  1.66, ease: "back", stagger: 1 }, "+=3")
+  .addLabel("piegraph--finished")
+  .to({}, { duration: 12})
+  .to("svg#piegraph g", {
+    duration: 1.66,
+    opacity: 0,
+    scale: 0,
+    stagger: 0.3,
+    ease: "back"
+  })
+  .to("svg#piegraph--label g", {
+    duration: 3,
+    opacity: 0,
+    scale: 0,
+    stagger: 0.3,
+    ease: "back"
+  }, "<")
+  .slideIn("#piePipe-check", {duration:0.33}, "-=1", "check")
+  .addLabel("piepipes--start")
+  .from("#piePipe-lastPipe", {
+    duration:1.33,
+    opacity: 0,
+    yPercent: 80,
+    xPercent: 30,
+    x: -70,
+    scale: 0,
+    ease: "back.inOut"
+  }, "-=0.33", "last pipe")
+  .addLabel("last pipe")
+  .slideIn("#piePipe-first", {},"+=1", "first pipe")
+  .dropletIn("#piePipe-droplet01 ", {})
+  .addLabel("first pipe")
+  .dropletFall("#piePipe-droplet01", {  yPercent: 333 }, "+=1")
+  .call(() => { splash_tl.restart(); })
+  .addLabel("first pipe dropped")
+  .slideIn("#piePipe-second", {}, "+=1", "second pipe")
+  .dropletIn("#piePipe-droplet02 ", {})
+  .addLabel("secondpipe")
+  .dropletFall("#piePipe-droplet02", {  yPercent: 255 }, "+=1")
+  .call(() => { splash_tl.restart(); })
+  .addLabel("second pipe dropped")
+  .slideIn("#piePipe-third", {}, "+=1", "third pipe")
+  .dropletIn("#piePipe-droplet03 ", {})
+  .addLabel("thirdpipe")
+  .dropletFall("#piePipe-droplet03", {  yPercent: 175 }, "+=1")
+  .call(() => { splash_tl.restart(); })
+  .addLabel("third pipe dropped")
+  .slideIn("#piePipe-fourth", {}, "+=1", "fourth pipe")
+  .dropletIn("#piePipe-droplet04 ", {})
+  .addLabel("fourthpipe")
+  .dropletFall("#piePipe-droplet04", {  yPercent: 100 }, "+=1")
+  .call(() => { splash_tl.restart(); })
+  .addLabel("fourth pipe dropped")
+  .to({}, {duration: 2}, "+=2")
+  .addLabel("end");
+  // END PIE PIPELINE TIMELINE //
 
 // FOOTER ANIMATION
 const tl_footer = gsap.timeline({
