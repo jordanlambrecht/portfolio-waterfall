@@ -2,7 +2,7 @@
   <div class="container h-100 d-flex flex-column justify-content-between px-xxxl-3">
     <div class="row h-100 d-flex flex-column justify-content-center">
       <div class="col-12 mb-3 flex-fill">
-        <h1 class="display-2 text-left text-xxl-center mw-xxxl-100 " id="thingsChangeHeader">Things Change Over Time.</h1>
+        <h1 class="display-2 text-left text-xxl-center mw-xxxl-100 " id="thingsChangeHeader">Things Change Over Time</h1>
       </div>
       <div class="col-12">
         <ul class="showslides d-xxxl-flex flex-xxxl-row flex-xxxl-wrap px-xxl-5">
