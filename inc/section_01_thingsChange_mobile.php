@@ -4,7 +4,7 @@
     <div class="container h-100 ">
       <div class="row h-100 d-flex flex-column justify-content-center">
         <div class="col-12 mb-3 flex-fill">
-          <h1 class="display-3 display-slideShow text-center" id="thingsChangeHeader--mobile">Things Change Over Time.</h1>
+          <h1 class="display-3 display-slideShow text-center" id="thingsChangeHeader--mobile">Things Change Over Time</h1>
         </div>
         <div class="col-12 ">
           <ul class="showslides-mobile d-flex flex-column align-items-center ps-sm-5">
