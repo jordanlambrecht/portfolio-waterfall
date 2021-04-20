@@ -31,5 +31,8 @@
       <li class="nav-item">
         <a class="nav-link" href="#strategy"><span class="sectionMenu--circle"></span>Our Strategy</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#piepipes"><span class="sectionMenu--circle"></span>Detailed Breakdown</a>
+      </li>
     </ul>
   </nav>
