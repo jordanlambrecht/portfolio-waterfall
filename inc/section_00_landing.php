@@ -1,5 +1,6 @@
-<section class="chapter" id="introduction" data-section-name="Introduction">
 
+<section class="chapter" id="introduction" data-section-name="Introduction">
+<!-- Section used for bookmarking -->
 </section>
 <header >
   <section class="header-container"  >

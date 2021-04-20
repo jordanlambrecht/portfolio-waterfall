@@ -1,4 +1,3 @@
-
 <section class="chapter chapter-mobile container-fluid w-100 vh-100 px-0 thingsChange-mobile" id="thingschangemobile" data-section-name="Things Change">
   <div class="showslides--mobile bg--black w-100 h-100 px-2 py-1 pt-5 carousel-cell">
     <div class="container h-100 ">
@@ -9,8 +8,8 @@
         <div class="col-12 ">
           <ul class="showslides-mobile d-flex flex-column align-items-center ps-sm-5">
             <li id="technology" class="selected d-flex flex-row justify-content-center align-items-center py-2 mb-2">
-                <?php echo file_get_contents("./assets/img/PW_Technology_v01.svg"); ?>
-                <h2 class="text-left color--light-yellow">Technology</h2>
+              <?php echo file_get_contents("./assets/img/PW_Technology_v01.svg"); ?>
+              <h2 class="text-left color--light-yellow">Technology</h2>
             </li>
             <li id="interestrates" class=" d-flex flex-row justify-content-center align-items-center py-2 mb-2">
               <?php echo file_get_contents("./assets/img/PW_InterestRates_v01.svg"); ?>
@@ -25,16 +24,12 @@
               <h2 class="text-left color--dark-blue">Government Spending</h2>
             </li>
           </ul>
-
         </div>
         <div class="col-12 flex-fill">
         </div>
-
-        </div>
       </div>
-
-
     </div>
+  </div>
   <div class="showslides--mobile bg--light-yellow w-100 h-100 p-2 carousel-cell">
       <?php include('./partials/01_thingsChange_slide_technology.php');  ?>
   </div>

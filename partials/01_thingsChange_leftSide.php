@@ -23,12 +23,10 @@
             <h2 class="text-left ">Government Spending</h2>
           </li>
         </ul>
-
       </div>
       <div class="col-12 flex-fill">
-          <!-- Dummy content for centering -->asdfasdf
+        <!-- Dummy content for centering -->asdfasdf
       </div>
     </div>
-
-</div>
   </div>
+</div>
