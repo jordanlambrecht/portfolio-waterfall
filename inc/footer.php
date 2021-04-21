@@ -4,7 +4,7 @@
     <div class="container py-1  h-100">
       <div class="row h-100 px-2 d-flex flex-column justify-content-between">
         <div class=" d-flex justify-content-center align-items-center flex-fill">
-          <h1 class="text-uppercase color--white display-2 fw-b text-center" id="footerdry">Don't Let Your Portfolio Dry Up.</h1>
+          <h1 class="text-uppercase color--white display-2 fw-b text-center" id="footerdry">Don't Let Your Portfolio Dry Up</h1>
         </div>
         <div class="  d-flex justify-content-center flex-column align-items-center flex-fill row">
           <div class="col-12 p-5 p-md-2 footer-wrapper-logo d-flex flex-column justify-content-center align-items-center">

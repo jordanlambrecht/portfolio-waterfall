@@ -54,6 +54,7 @@ $(stockMarket).click(function() {
   }
 });
 function changeBgColor(color){
+  // console.log(color);
   gsap.to('.showslides--right', {
     backgroundColor: color,
     duration: 0.66,
