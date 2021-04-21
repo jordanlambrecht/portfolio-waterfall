@@ -27,7 +27,7 @@
         </div>
         <div class=" py-3 d-flex flex-column justify-content-center ">
             <small class="footer-copyright shadow-sm w-100 text-center">© Copyright <?php echo Date("Y");?>, All Rights Reserved.</small>
-            <small class="footer-copyright shadow-sm text-center">Website Made In Nebraska With Love By <a href="https://pixelbakery.com" target="_blank" class="">Pixel Bakery Design Studio</a>. </small>
+            <small class="footer-copyright shadow-sm text-center">Website Made In Nebraska With Love By <a href="https://pixelbakery.com" target="_blank" class="" rel="noopener">Pixel Bakery Design Studio</a>. </small>
         </div>
       </div>
     </div>
