@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
+  <meta name="description" content="Portfolio Waterfall is a replenishing income strategy to help grow your wealth over time.">
   <meta name="author" content="Pixel Bakery">
   <link rel="icon" type="image/png" href="PW_favicon.png" />
   <title>Portfolio Waterfall</title>
