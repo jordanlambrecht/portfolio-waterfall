@@ -8,7 +8,7 @@
         </div>
         <div class="  d-flex justify-content-center flex-column align-items-center flex-fill row">
           <div class="col-12 p-5 p-md-2 footer-wrapper-logo d-flex flex-column justify-content-center align-items-center">
-            <img id="footer-logo" class="img-fluid" src="../assets/img/PortfolioWaterfall_PrimaryLogo_v01@2x.png" />
+            <img id="footer-logo" class="img-fluid" src="../assets/img/PortfolioWaterfall_PrimaryLogo_v01@2x.png" alt="Portfolio Waterfall Primary Logo"/>
             <h2 id="footer-tagline" class="color--white text-uppercase fst-italic mt-4 text-center">A Replenishing<br>  Income Strategy</h2>
           </div>
         </div>
