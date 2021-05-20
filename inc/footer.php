@@ -4,11 +4,11 @@
     <div class="container py-1  h-100">
       <div class="row h-100 px-2 d-flex flex-column justify-content-between">
         <div class=" d-flex justify-content-center align-items-center flex-fill">
-          <h1 class="text-uppercase color--white display-2 fw-b text-center" id="footerdry">Don't Let Your Portfolio Dry Up.</h1>
+          <h1 class="text-uppercase color--white display-2 fw-b text-center" id="footerdry">Don't Let Your Portfolio Dry Up</h1>
         </div>
         <div class="  d-flex justify-content-center flex-column align-items-center flex-fill row">
           <div class="col-12 p-5 p-md-2 footer-wrapper-logo d-flex flex-column justify-content-center align-items-center">
-            <img id="footer-logo" class="img-fluid" src="../assets/img/PortfolioWaterfall_PrimaryLogo_v01@2x.png" />
+            <img id="footer-logo" class="img-fluid" src="../assets/img/PortfolioWaterfall_PrimaryLogo_v01@2x.png" alt="Portfolio Waterfall Primary Logo"/>
             <h2 id="footer-tagline" class="color--white text-uppercase fst-italic mt-4 text-center">A Replenishing<br>  Income Strategy</h2>
           </div>
         </div>
@@ -27,7 +27,7 @@
         </div>
         <div class=" py-3 d-flex flex-column justify-content-center ">
             <small class="footer-copyright shadow-sm w-100 text-center">© Copyright <?php echo Date("Y");?>, All Rights Reserved.</small>
-            <small class="footer-copyright shadow-sm text-center">Website Made In Nebraska With Love By <a href="https://pixelbakery.com" target="_blank" class="">Pixel Bakery Design Studio</a>. </small>
+            <small class="footer-copyright shadow-sm text-center">Website Made In Nebraska With Love By <a href="https://pixelbakery.com" target="_blank" class="" rel="noopener">Pixel Bakery Design Studio</a>. </small>
         </div>
       </div>
     </div>
