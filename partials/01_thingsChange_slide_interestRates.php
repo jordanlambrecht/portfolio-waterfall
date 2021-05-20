@@ -9,7 +9,7 @@
              <h4 class="display-3 color--white">1980</h4>
              <span>15.41%</span>
           </div>
-         </div>
+         </div> 
          <div class="timeline-block timeline-block-left text-right ">
            <div class="marker"></div>
             <div class="timeline-content">
@@ -34,8 +34,8 @@
       	<div class="timeline-block timeline-block-right align-self-end">
           <div class="marker"></div>
           <div class="timeline-content">
-            <h4 class="display-3 color--white mb-0 pb-0">2020</h4>
-            <span>0.74%</span>
+            <h4 class="display-3 color--white mb-0 pb-0">2021</h4>
+            <span>1.08%</span>
           </div>
         </div>
       </div>

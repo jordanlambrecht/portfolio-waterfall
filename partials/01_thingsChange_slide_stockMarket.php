@@ -10,7 +10,7 @@
             <div class="point"></div>
           </div>
           <h4 class="display-2">360</h4>
-        </div>
+        </div> 
         <div class="flex-fill stock-card--inner d-flex justify-content-between px-4 py-3 align-items-center">
           <h4 class="display-3">2000</h4>
           <div class="arrow flex-fill d-flex justify-content-start">
@@ -28,12 +28,12 @@
           <h4 class="display-2">1150</h4>
         </div>
         <div class="stock-card--inner d-flex justify-content-between px-4 py-3 align-items-center">
-          <h4 class="display-3">2020</h4>
+          <h4 class="display-3">2021</h4>
           <div class="arrow flex-fill d-flex justify-content-start">
             <div class="line flex-fill"></div>
             <div class="point"></div>
           </div>
-          <h4 class="display-2">3337</h4>
+          <h4 class="display-2">3793</h4>
         </div>
       </div>
       <p class="govt-footer">  *finance.yahoo.com</p>
